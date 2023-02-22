@@ -38,9 +38,9 @@ struct Info{
 
 
 int N, M, K, A, B; // 접수창구, 정비창구, 고객수, 두고간접수창구 A , 정비창구 B
-int counter_time[MAX_DESK];
-int repair_time[MAX_DESK];
-vector<int> customer_time;
+int counter_time[MAX_DESK]; // 접수 시간
+int repair_time[MAX_DESK]; // 정비 시간
+vector<int> customer_time; // 손님들이 오는 시간
 
 int init()
 {
@@ -71,15 +71,16 @@ int solve_func()
 	int time = 0;
 	int ans = 0;
 
-	queue<Info> counter_line;
-	priority_queue<Info>repair_line;
-	int visited_counter[MAX_DESK] = { 0, };
-	Info counter_desk[MAX_DESK] = { 0, };
-	int visited_repair[MAX_DESK] = { 0, };
-	Info repair_desk[MAX_DESK] = { 0, };
-	int cnt = 1;
-	int customer_size = customer_time.size();
-	int repair_complete = 0;
+	queue<Info> counter_line; // 접수창구 줄
+	priority_queue<Info>repair_line; // 정비창구 줄 - 정비 창구는 도착한 시간, 시간이 같다면 접수창구 번호 순으로 서게됨.
+	int visited_counter[MAX_DESK] = { 0, }; // 접수 창구에서 접수 하고 있는지
+	Info counter_desk[MAX_DESK] = { 0, }; // 접수 창구에 있는 사람들의 정보
+	int visited_repair[MAX_DESK] = { 0, }; // 정비 창구에서 정비 하고 있는지
+	Info repair_desk[MAX_DESK] = { 0, }; // 정비 창구에 있는 사람들의 정보
+	int cnt = 1; // 손님 번호 생성용 cnt
+	int customer_size = customer_time.size(); // 손님의 수
+	int repair_complete = 0; // 수리 창구 배정이 완료 되었는지
+	// 손님의수 == 수리창구 배정이 완료되면 종료
 
 	sort(customer_time.begin(), customer_time.end(), comp);
 
@@ -125,7 +126,7 @@ int solve_func()
 					repair = i;
 					repair_desk[i] = repair_line.top();
 					repair_desk[i].repair = repair;
-					repair_desk[i].time = time + repair_time[i];
+					repair_desk[i].time = time + repair_time[i]; // 정비 종료시간을 저장
 					repair_line.pop();
 
 					// 종료 변수
@@ -171,7 +172,7 @@ int solve_func()
 					counter = i;
 					counter_desk[i].num = counter_line.front().num;
 					counter_desk[i].counter = counter;
-					counter_desk[i].time = time + counter_time[i];
+					counter_desk[i].time = time + counter_time[i]; // 접수 종료시간을 저장
 					counter_line.pop();
 
 					break;
