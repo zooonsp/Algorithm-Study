@@ -14,6 +14,7 @@ struct Stairs_Info{
 	int cnt;
 };
 
+// priority queue는 거리 기준으로, 들어올 때 시간 값도 같이 저장
 struct Stairs_order{
 	int dist;
 	int time;
@@ -36,11 +37,13 @@ int min(int a, int b)
 
 
 int N;
-int MAP[MAX][MAX];
-vector<point> person;
-Stairs_Info stairs[2];
-int sel[MAX];
-int select_cnt;
+int MAP[MAX][MAX]; // 공간 배열
+vector<point> person; // 사람들만 저장
+Stairs_Info stairs[2]; // 계단은 2개만 있음
+int select_cnt; // 계단에 가는 모든 경우를 2진수로 쓸 예정 
+                // 사람이 4명이라면 0000 ~ 1111 까지
+int sel[MAX]; // select_cnt를 2진수 변환해서 다 분리해서 저장
+
 
 	
 int init()
@@ -100,9 +103,10 @@ int select_func()
 
 int find_time()
 {
-	priority_queue<Stairs_order> pq[2];
+	priority_queue<Stairs_order> pq[2]; // 각 계단별 priority queue
 	queue<int> stair_use[2];
 
+  //각 계단별 pq에 그 계단을 이용하는 사람들을 다 넣어줌
 	for (int i = 0; i < person.size(); i++)
 	{
 		pq[sel[i]].push({ abs(person[i].x - stairs[sel[i]].pt.x) + abs(person[i].y - stairs[sel[i]].pt.y)
@@ -111,12 +115,15 @@ int find_time()
 
 	int ret = 0;
 
+  // 각 계단별로 시간을 구해서 최대값 return
 	for (int i = 0; i < 2; i++)
 	{
 		int time = 0;
 		while (!pq[i].empty() || !stair_use[i].empty())
 		{
 			time++;
+			
+			// 계단 이용이 끝나면 stair_use 비워줌
 			while (1)
 			{
 				if (!stair_use[i].empty())
@@ -129,12 +136,13 @@ int find_time()
 				
 				break;
 			}
-
+      
+      // 시간이 되면 계단이용
 			while (1)
 			{
 				if (pq[i].empty()) break; // pq 가 비었으면 continue;
 				if (pq[i].top().dist > time) break;
-				if (stair_use[i].size() >= 3) break;
+				if (stair_use[i].size() >= 3) break; // 3명이 쓰고 있으면 못 씀
 
 				stair_use[i].push(time);
 				pq[i].pop();
@@ -155,14 +163,12 @@ int solve_func()
 {
 	int ans = 21e8;
 
-	int pow_res = pow(2, person.size());
+	int pow_res = pow(2, person.size()); // 2^(사람수) : 사람수 만큼 계단을 나눠가는 경우의 수
 	
 	for (int i = 0; i < pow_res; i++)
 	{
-
-
 		int temp = find_time();
-		select_func();
+		select_func(); // select 값 증가 시키고 배열 다시 세팅
 		if (ans > temp)
 			ans = temp;
 	}

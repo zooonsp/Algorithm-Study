@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// pay 배열 index
 enum{
 	DAY,
 	MONTH,
@@ -26,19 +27,22 @@ int input()
 
 int dfs(int level)
 {
+  // 기저조건 12개월 이상
 	if (level >= 12)
 	{
 		if (mn > sum)
 			mn = sum;
 		return 0;
 	}
-
+  
+  // 가지치기1 : 수영장 가는 일이 없는 달은 다음 재귀 호출
 	if (month[level] == 0)
 	{
 		dfs(level + 1);
 		return 0;
 	}
-
+  
+  // 달만큼 인자 증가 시키며 재귀 호출
 	int temp = pay[DAY] * month[level];
 	sum += temp;
 	if (mn > sum)
@@ -67,6 +71,7 @@ int dfs(int level)
 
 int solve_func()
 {
+  // 처음은 1년 값으로
 	mn = pay[YEAR];
 
 	dfs(0);
