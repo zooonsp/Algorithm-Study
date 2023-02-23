@@ -10,6 +10,26 @@
 | Week 01</br>(23.02.12.) | V | V | V | V | V |
 | Week 02</br>(23.02.19.)  | V | V | V | V | V |
 
+<br></br>
 
+## PR & Commit Message Rule
+
+#### Pull Request
+
+- 명령 / 주차(폴더명) / 이름
+
+#### Commit Message
+
+- 명령 / 주차(폴더명) / 문제
+
+#### Command keyward
+
+- :heavy_plus_sign: ADD : 파일, 디렉토리 추가
+- :black_nib: MOD : 파일 수정 (파일명 수정도)
+- :scissors: DEL : 파일, 디렉토리 삭제
+- :open_file_folder: MOVE : 파일, 디렉토리 이동
+- :boom: MERGE : 브랜치 충돌 후 직접 Merge
 
 <br></br>
+
+:
