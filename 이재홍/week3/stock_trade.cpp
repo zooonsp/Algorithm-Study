@@ -10,12 +10,12 @@ int month; // month to track
 int dfs(int this_month, int stock_idx, int now, int next) {
     // condition check
     if(stock <= stock_idx) {return now + next;} // pass remain seed to next month
-    int max_next = next;
+    int max_next = next; // initialize max_next seed amount
     int now_price = stock_data[stock_idx][this_month];
     int next_price = stock_data[stock_idx][this_month + 1];
     if(next_price < now_price) { // skip price dropping stock
         int new_next = dfs(this_month, stock_idx + 1, now, next);
-        max_next = max_next < new_next ? new_next : max_next;
+        max_next = max_next < new_next ? new_next : max_next; // update max_next seed amount
         return max_next;
     }
     // backtracking
@@ -23,9 +23,9 @@ int dfs(int this_month, int stock_idx, int now, int next) {
     for(int i = 0 ; i <= quantity; ++i) { // buy all available combination
         // process
         // recursive
-        int new_next = dfs(this_month, stock_idx + 1, now - i * now_price, next + i * next_price);
+        int new_next = dfs(this_month, stock_idx + 1, now - i * now_price, next + i * next_price); // buy stock and update now and next seed balance
         // unprocess
-        max_next = max_next < new_next ? new_next : max_next;
+        max_next = max_next < new_next ? new_next : max_next; // update max_next seed amount
     }
     return max_next; // get max next seed
 }
