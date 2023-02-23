@@ -51,27 +51,27 @@ void dfs(int level, int now_idx) { // select from all adjacent nodes included in
         Coordinate next = now + d[now.x % 2][i];
         if(dfs_out_of_bound(next)) {continue;} // skip out of bound node
         if(visited[next.y][next.x]) {continue;} // skip visited or banned node
-        int ableFlag = 1;
-        for(int j = 0; j < DIR; ++j) {
+        int ableFlag = 1; // flag to eliminate duplicate nodes
+        for(int j = 0; j < DIR; ++j) { // check adjacent nodes of next node
             if(j == (i + DIR / 2) % DIR) {continue;}
             Coordinate next_next = next + d[next.x % 2][j];
-            if(visited[next_next.y][next_next.x] == 2) {
+            if(visited[next_next.y][next_next.x] == 2) { // if outer node exists, do not add to reachable list (already added to list)
                 ableFlag = 0;
                 break;}
         }
-        if(ableFlag) {
-            reachable[reachable_level[level]] = next;
-            ++reachable_level[level];
+        if(ableFlag) { // if there are no adjacent nodes arount next node, add to reachable list
+            reachable[reachable_level[level]] = next; // add to reachable list
+            ++reachable_level[level]; // modify max reachable node size
         }
     }
     // backtracking
-    for(int i = now_idx + 1; i < reachable_level[level]; ++i) {
+    for(int i = now_idx + 1; i < reachable_level[level]; ++i) { // select not checked nodes
         Coordinate next = reachable[i];
         // process
         visited[next.y][next.x] = 2;
         path.push_back(next);
         // recursive
-        dfs(level + 1, i);
+        dfs(level + 1, i); // update level and last selected node index
         // unprocess
         visited[next.y][next.x] = 0;
         path.pop_back();
