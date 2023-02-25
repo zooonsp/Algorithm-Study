@@ -19,7 +19,7 @@
 | 활주로 건설 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeW7FakkUDFAVH) | 접근까지 시간이 걸림 |
 
 ## Week 03 (22.02.20 ~ 22.02.16)
-| 제목 | 링크 |
-| :---: | :---: |
-| 양봉업자 코코 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C1) |
-| 주식 거래 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C2) |
+| 제목 | 링크 | 기록 사항 |
+| :---: | :---: | :---: |
+| 양봉업자 코코 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C1) | 굳이 DFS 안에 다 안 넣고 따로 처리 해도 된다 |
+| 주식 거래 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C2) | Greedy가 명확하지 않으면 억지로 끼워맞추지 말고 완전 탐색 하기 |
