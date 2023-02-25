@@ -30,7 +30,7 @@ struct Info {
 };
 
 int main() {
-	cin.tie(NULL)->sync_with_stdio(false);
+	// cin.tie(NULL)->sync_with_stdio(false);
 
 	int T;
 	// 매월 수익을 낼 수 있으면 다 해라 그냥
