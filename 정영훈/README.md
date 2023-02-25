@@ -18,7 +18,7 @@
 | 특이한 자석 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeV9sKkcoDFAVH) | bit를 활용한 rotate 계산 |
 | 활주로 건설 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeW7FakkUDFAVH) | 접근까지 시간이 걸림 |
 
-## Week 03 (22.02.20 ~ 22.02.16)
+## Week 03 (22.02.20 ~ 22.02.26)
 | 제목 | 링크 | 기록 사항 |
 | :---: | :---: | :---: |
 | 양봉업자 코코 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C1) | 굳이 DFS 안에 다 안 넣고 따로 처리 해도 된다 |

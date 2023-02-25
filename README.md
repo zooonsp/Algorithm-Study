@@ -6,23 +6,24 @@
 ## Record
 |  | 김용우 | 이재홍 | 이충혁 | 정영훈 | 탁성건 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| GitHub |  |
+| GitHub | [Link](https://github.com/soybean33) | [Link](https://github.com/h78749891) | [Link](https://github.com/chyuk98) | [Link](https://github.com/ChocoBreeze) | [Link](https://github.com/profornnan) |
 | Week 01</br>(23.02.12.) | V | V | V | V | V |
-| Week 02</br>(23.02.19.)  | V | V | V | V | V |
+| Week 02</br>(23.02.19.) | V | V | V | V | V |
+| Week 03</br>(23.02.26.)
 
 <br></br>
 
 ## PR & Commit Message Rule
 
-#### Pull Request
+### Pull Request
 
 - 명령 / 주차(폴더명) / 이름
 
-#### Commit Message
+### Commit Message
 
 - 명령 / 주차(폴더명) / 문제
 
-#### Command keyward
+### Command keyward
 
 - :heavy_plus_sign: ADD : 파일, 디렉토리 추가
 - :black_nib: MOD : 파일 수정 (파일명 수정도)
@@ -32,4 +33,4 @@
 
 <br></br>
 
-:
+## 다들 파이팅!
