@@ -13,7 +13,7 @@
 | 제목 | 링크 | 기록 사항 |
 | :---: | :---: | :---: |
 | 벌꿀 채취 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu) | 접근까지 시간이 걸림 |
-| 점심 식사시간 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5-BEE6AK0DFAVl) | -- |
+| 점심 식사시간 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5-BEE6AK0DFAVl) | 구현 시간 |
 | 차량 정비소 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy) | 문제 해석 및 구현 시간 |
 | 특이한 자석 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeV9sKkcoDFAVH) | bit를 활용한 rotate 계산 |
 | 활주로 건설 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeW7FakkUDFAVH) | 접근까지 시간이 걸림 |
