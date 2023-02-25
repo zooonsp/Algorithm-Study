@@ -3,6 +3,8 @@
 #include <vector>
 #include <utility>
 
+// Commit : 명령 / 주차(폴더명) / 문제
+
 using namespace std;
 int N, M;
 int zib[16][16]{};
