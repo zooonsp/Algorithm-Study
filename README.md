@@ -14,6 +14,11 @@
 
 <br></br>
 
+## PR Table of This Week
+- 5[ 탁성건 ], 3[ 이재홍 ], 4[ 정영훈 ], 1[ 이충혁 ], 2[ 김용우 ]
+
+<br></br>
+
 ## PR & Commit Message Rule
 
 ### Pull Request
@@ -29,7 +34,7 @@
 - :open_file_folder: MOVE : 파일, 디렉토리 이동
 - :boom: MERGE : 브랜치 충돌 후 직접 Merge
 
-<pre></pre>
+<br></br>
 
 ## PR(Pull Request) - Review Rule
 매 스터디가 끝난 후, 다음 주에 어떤 사람의 코드를 리뷰해야 할지 결정. </br>
