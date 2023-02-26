@@ -22,8 +22,6 @@ void dfs(int y, int x, int level, int sum) {
 		return;
 	}
 
-	dfs(y, x, level + 1, sum);
-
 	for (int i = 0; i < 6; i++) {
 		int ny = y + dy[x % 2][i];
 		int nx = x + dx[x % 2][i];
