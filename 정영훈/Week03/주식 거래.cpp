@@ -78,6 +78,7 @@ int main() {
 				return i1.profits * i1.cnt < i2.profits * i2.cnt;
 			}; // 벌 수 있는 수익 내림차순 정렬
 			
+
 			if (i < L) {
 				// 살거 사기
 				while(1) {
