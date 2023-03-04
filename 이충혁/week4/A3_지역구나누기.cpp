@@ -1,7 +1,6 @@
 #include<iostream>
 #include<cstring>
 #include<cmath>
-#include<bitset> // bitmask 체크용 나중에 지우자
 using namespace std;
 const int MAX_MAT = 10; 
 const int MAX = 21e8;
