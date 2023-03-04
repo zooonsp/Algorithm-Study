@@ -32,18 +32,6 @@ int main(void)
 			// 키가 가장 큰 나무와 같아지기 위해 필요한 길이 계산
 			height[i] = maxHeight - height[i];
 
-			// 키가 가장 큰 나무라면 skip
-			if (height[i] == 0)
-				continue;
-
-			// 필요한 길이가 3의 배수라면
-			if (height[i] % 3 == 0)
-			{
-				// 2일을 소요하면 3만큼 키울 수 있으니 필요한 날짜를 계산해 ans에 더하기
-				ans += (height[i] / 3) * 2;
-				continue;
-			}
-
 			// 짝수 개수
 			cnt[0] += height[i] / 2;
 			// 홀수 개수
