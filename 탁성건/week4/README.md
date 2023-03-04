@@ -19,7 +19,7 @@
    - 소속의 개수가 2개라면 문제가 없다.
 3. 두 개의 지역구로 분리하는데 문제가 없다면 유권자 수 차이를 계산하고 정답을 갱신한다.
 
-![지역구나누기](images/지역구나누기.png)
+![zoning](images/zoning.png)
 
 ## 마법의 물뿌리개
 
@@ -71,7 +71,7 @@
            - 평지인 경우 1
            - 오르막인 경우 높이 차이의 2배
 
-![산악구조로봇](images/산악구조로봇.png)
+![mountain_resque_bot](images/mountain_resque_bot.png)
 
 ## 스노우맨
 
@@ -98,5 +98,5 @@
          2. 다음 좌표와 최소 limit을 PQ에 삽입
             - 다음 좌표까지 가는데 필요한 최소 limit은 현재 좌표까지 오는데 필요한 최소 limit과 현재 jump에서 필요한 limit 중 큰 값
 
-![스노우맨](images/스노우맨.png)
+![snowman](images/snowman.png)
 
