@@ -8,7 +8,6 @@
 | 요리사 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeUtVakTMDFAVH) | 조합 |
 | 무선 충전 | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRDL1aeugDFAUo) | -- |
 
-
 ## Week 02 (22.02.13 ~ 22.02.19)
 | 제목 | 링크 | 기록 사항 |
 | :---: | :---: | :---: |
@@ -23,3 +22,11 @@
 | :---: | :---: | :---: |
 | 양봉업자 코코 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C1) | 굳이 DFS 안에 다 안 넣고 따로 처리 해도 된다 |
 | 주식 거래 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C2) | Greedy가 명확하지 않으면 억지로 끼워맞추지 말고 완전 탐색 하기 |
+
+## Week 04 (22.02.27 ~ 22.03.03)
+| 제목 | 링크 | 기록 사항 |
+| :---: | :---: | :---: |
+| 지역구 나누기 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C3) | UnionFind까지는 생각했었는데 시간초과가 나서 가지치기!
+| 마법의 물뿌리개 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C4) | 이거는 내가 어떻게 푼지 아직도 모르겠음.
+| 산악 구조 로봇 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C5) | 그냥 길찾기
+| 스노우맨 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C6) | 길찾기(거리 갱신이 조금 다른..)
