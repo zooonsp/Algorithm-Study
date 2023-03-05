@@ -77,8 +77,6 @@ int Union_Find(int bit_val)
 			group_j = (bit_val >> j) % 2;
 			if (group_i != group_j) continue; // 행과 열의 나눈 그룹이 다르면 
 
-			if (Find(i, group_i) == Find(j, group_j)) continue; // 부모가 같다면 continue;
-
 			Union(i, j, group_i);
 		}
 	}
@@ -107,7 +105,6 @@ int group_check(int bit_val)
 
 int pop_diff()
 {
-	int ret;
 	int group_pop[2];
 	for (int i = 0; i < 2; i++)
 	{
