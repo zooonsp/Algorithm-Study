@@ -3,8 +3,12 @@
 using namespace std;
 
 int N, T; // N : 사람 수, T : 팀 갯수
-vector<int> person; // 사람 정보 저장
-vector<int> prefix_sum; // 사람 수 누적합
+vector<int> person; // 두뇌 회전 속도 저장
+vector<int> prefix_sum; //두뇌 회전 속도 누적합
+
+// 1. 이분 탐색으로 가능한 그룹 두뇌 회전 속도의 최대값이 최소가 되도록 찾는다.  (mid : 임의의 그룹 최대값)
+// 2. mid를 기준으로 팀이 나누는게 가능한지 탐색하는데 prefix sum으로 대소 비교한다.
+// prefix_sum[4] (4번 까지 누적합) - prefix_sum[2] (2번까지 누적합) : 3, 4 번째 합을 나타냄.
 
 int mx = 0;
 
