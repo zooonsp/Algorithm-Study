@@ -15,6 +15,15 @@
     ![스터디 (20)(5)](https://user-images.githubusercontent.com/75352656/224534097-c3fddb15-3ab1-41f9-8b70-0b0b270d361a.png)
     ![스터디 (21)(4)](https://user-images.githubusercontent.com/75352656/224534103-ba3aafa9-6ea0-4094-9466-0e79744dfe25.png)
 
+### DP(TopDown, BottomUp)
+![image](https://user-images.githubusercontent.com/75352656/224555816-651726cd-4b92-46ab-8652-56247ec932df.png)
+- TopDown 구현은 -> Profornann
+
+### Dijkstra
+- Dijkstra 구현 -> h78749891
+
+
+
 ## 프로세서 연결하기
 - [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf)
 - 내 접근 : 완전 탐색(DFS)
