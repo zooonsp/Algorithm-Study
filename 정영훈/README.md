@@ -23,10 +23,18 @@
 | 양봉업자 코코 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C1) | 굳이 DFS 안에 다 안 넣고 따로 처리 해도 된다 |
 | 주식 거래 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C2) | Greedy가 명확하지 않으면 억지로 끼워맞추지 말고 완전 탐색 하기 |
 
-## Week 04 (23.02.27 ~ 23.03.03)
+## Week 04 (23.02.27 ~ 23.03.05)
 | 제목 | 링크 | 기록 사항 |
 | :---: | :---: | :---: |
 | 지역구 나누기 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C3) | UnionFind까지는 생각했었는데 시간초과가 나서 가지치기!
 | 마법의 물뿌리개 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C4) | 이거는 내가 어떻게 푼지 아직도 모르겠음.
 | 산악 구조 로봇 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C5) | 그냥 길찾기
 | 스노우맨 | [문제 링크](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C6) | 길찾기(거리 갱신이 조금 다른..)
+
+## Week 05 (23.03.06 ~ 23.03.12)
+| 제목 | 링크 | 기록 사항 |
+| :---: | :---: | :---: |
+| [코딩 테스트 공부](#코딩-테스트-공부) | [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | DFS -> 시간 초과 -> DP(빠뜨린 부분이 있었음) |
+| [프로세서 연결하기](#프로세서-연결하기) | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf) | 시간 초과 당연히 날 줄 알았는데 그냥 되네(?) |
+| [머리 맞대기](#머리-맞대기) | [문제 링크](https://pro.mincoding.co.kr/problem-step/7/level/108/detail/M4_04) | 팀을 어떻게 구성할지 생각하지 못했음 |
+| [구간 나누기2](#구간-나누기-2) | [문제 링크](https://www.acmicpc.net/problem/13397) | 머리 맞대기보다는 팀 구성 방법이 간단한 문제 |
