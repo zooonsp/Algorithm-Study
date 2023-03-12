@@ -42,8 +42,8 @@
 ### Week 04 (23.03.06 ~ 23.03.12)
 | 제목 | 풀이 | 시간 |
 | :---: | :---: | :---: |
-| [머리 맞대기](https://pro.mincoding.co.kr/problem-step/7/level/108/detail/M4_04) | Binary Search, Prefix sum | -- : --
-| [프로세서 연결하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf) | | -- : --
+| [머리 맞대기](https://pro.mincoding.co.kr/problem-step/7/level/108/detail/M4_04) | Parametric search, Prefix sum | -- : --
+| [프로세서 연결하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf) | DFS | 02 : 36
 | [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | | -- : --
 
 
