@@ -1,4 +1,4 @@
-## Week 01 (22.02.06 ~ 22.02.12)
+## Week 01 (23.02.06 ~ 23.02.12)
 | 제목 | 내 접근 | 링크 |
 | :---: | :---: | :---: |
 | [수영장](#수영장) | 완전 탐색(DFS) | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpFQaAQMDFAUq) |
