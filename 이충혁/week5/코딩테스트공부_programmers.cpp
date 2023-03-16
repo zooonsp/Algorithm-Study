@@ -1,8 +1,6 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <vector>
-#include <cmath>
-
 using namespace std;
 
 const int MAX = 21e8;
@@ -16,20 +14,18 @@ enum PB_CONST {
 	alp_req, cop_req, alp_rwd, cop_rwd, cost
 };
 
-Info max_limit; // �ּ�, �ִ� �˰��� �ڵ���
-int now_time = 0; // dfs ���µ� �ð�
+Info max_limit; // 최소, 최대 알고력 코딩력
 
-
-
-
+int min(int a, int b)
+{
+	return (a < b) ? a : b;
+}
 
 int DP[MAX_DP][MAX_DP] = { 0, }; // alp, cop
 
-int solution(int alp, int cop, vector<vector<int>>& problems) {
+int solution(int alp, int cop, vector<vector<int>> &problems) {
 
-	int ans = MAX;
-
-	// �˰���, �ڵ����� �ִ� �ּҸ� ����
+	// 알고력, 코딩력의 최대 최소를 구함
 	for (int i = 0; i < problems.size(); i++)
 	{
 		if (max_limit.alp < problems[i][alp_req])
@@ -48,39 +44,40 @@ int solution(int alp, int cop, vector<vector<int>>& problems) {
 		}
 	}
 
+	if (alp > max_limit.alp)
+		alp = max_limit.alp;
+
+	if (cop > max_limit.cop)
+		cop = max_limit.cop;
+
 	DP[alp][cop] = 0;
 
 	for (int i = alp; i <= max_limit.alp; i++) // alp
 	{
 		for (int j = cop; j <= max_limit.cop; j++) // cop
 		{
-
-
-			
-
-
-			DP[i + 1][j] = min(DP[i + 1][j], DP[i][j] + 1);
+			DP[i + 1][j] = min(DP[i + 1][j], DP[i][j] + 1); // 1씩 alp, cop 증가시키는 부분 DP 채우기
 			DP[i][j + 1] = min(DP[i][j + 1], DP[i][j] + 1);
 
 			for (int k = 0; k < problems.size(); k++)
 			{
 
-				if (i < problems[k][alp_req] || j < problems[k][cop_req])
+				if (i < problems[k][alp_req] || j < problems[k][cop_req]) // 지금 알고력 코딩력이 목표치에 다다르지 않으면
 					continue;
 
 				int alp_index = i + problems[k][alp_rwd];
 				int cop_index = j + problems[k][cop_rwd];
 
-				if (alp_index > max_limit.alp)
+				if (alp_index > max_limit.alp) // alp, cop가 최대치를 넘어서면 최대치로 바꾸기
 				{
 					alp_index = max_limit.alp;
 				}
-				if(cop_index > max_limit.cop)
+				if (cop_index > max_limit.cop)
 				{
 					cop_index = max_limit.cop;
 				}
 
-				DP[alp_index][cop_index] = min(DP[alp_index][cop_index], DP[i][j] + problems[k][cost]);
+				DP[alp_index][cop_index] = min(DP[alp_index][cop_index], DP[i][j] + problems[k][cost]); 
 
 			}
 		}
@@ -93,7 +90,9 @@ int solution(int alp, int cop, vector<vector<int>>& problems) {
 
 
 
-// ���⼭���ʹ� ����¿�
+
+
+// 여기서부터는 입출력용
 
 int input(int& alp, int& cop, vector<vector<int>>& temp_pb)
 {
