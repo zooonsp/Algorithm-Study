@@ -1,4 +1,4 @@
-## Week 02 (22.02.13 ~ 22.02.19)
+## Week 02 (23.02.13 ~ 23.02.19)
 | 제목 | 내 접근 | 링크 |
 | :---: | :---: | :---: |
 | [벌꿀 채취](#벌꿀-채취) | 완전 탐색(DFS) | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu) |
