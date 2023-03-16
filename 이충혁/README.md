@@ -1,4 +1,5 @@
 # 이충혁
+> 3시간 이상 고민 후 정답을 보고 풀었다면 TIME OVER
 ### Week 01 (23.02.06 ~ 23.02.12)
 | 제목 | 풀이 |
 | :---: | :---: |
@@ -39,11 +40,11 @@
 
 <br></br>
 
-### Week 04 (23.03.06 ~ 23.03.12)
+### Week 04 (23.03.06 ~ 23.03.16)
 | 제목 | 풀이 | 시간 |
 | :---: | :---: | :---: |
-| [머리 맞대기](https://pro.mincoding.co.kr/problem-step/7/level/108/detail/M4_04) | Parametric search, Prefix sum | -- : --
+| [머리 맞대기](https://pro.mincoding.co.kr/problem-step/7/level/108/detail/M4_04) | Parametric search, Prefix sum | TIME OVER
 | [프로세서 연결하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf) | DFS | 02 : 36
-| [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | | -- : --
+| [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | DP, bottom-up | TIME OVER
 
 
