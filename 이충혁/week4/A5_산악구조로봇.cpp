@@ -16,8 +16,8 @@ struct point
 
 struct Info_route
 {
-	point to; // µµÂø ÁöÁ¡
-	int fuel; // ¿©±â±îÁö µµ´Þ ÇÏ±â À§ÇÑ ¿¬·á ¾ç 
+	point to; // ë„ì°© ì§€ì 
+	int fuel; // ì—¬ê¸°ê¹Œì§€ ë„ë‹¬ í•˜ê¸° ìœ„í•œ ì—°ë£Œ ì–‘ 
 
 	bool operator < (Info_route next) const
 	{
@@ -33,17 +33,17 @@ struct Info_route
 
 struct Info_turnel
 {
-	point pt1, pt2; // ÅÍ³Î µÎ ÀÔ±¸
-	int fuel; // ÅÍ³Î Åë°ú½Ã µå´Â ¿¬·á
+	point pt1, pt2; // í„°ë„ ë‘ ìž…êµ¬
+	int fuel; // í„°ë„ í†µê³¼ì‹œ ë“œëŠ” ì—°ë£Œ
 };
 
-// ´ÙÀÍ½ºÆ®¶ó·Î Ç®ÀÌ
-// MAT µ¿¼­ ³²ºÏ ¹æÇâÀ» ¸ðµÎ ¿§Áö·Î ³õ°í
-// ÅÍ³Îµµ ¿§Áö·Î ³õ°í 1,1 ÁÂÇ¥¿¡¼­ ¿¬·á ÃÖ¼Ò·Î µå´Â ±æµéÀ» Å½»ö
+// ë‹¤ìµìŠ¤íŠ¸ë¼ë¡œ í’€ì´
+// MAT ë™ì„œ ë‚¨ë¶ ë°©í–¥ì„ ëª¨ë‘ ì—£ì§€ë¡œ ë†“ê³ 
+// í„°ë„ë„ ì—£ì§€ë¡œ ë†“ê³  1,1 ì¢Œí‘œì—ì„œ ì—°ë£Œ ìµœì†Œë¡œ ë“œëŠ” ê¸¸ë“¤ì„ íƒìƒ‰
 
-int N, M; // N: Áöµµ º¯ÀÇ ±æÀÌ, M: ÅÍ³ÎÀÇ °¹¼ö
-int MAT[MAX_MAT][MAX_MAT]; // Áöµµ ³ôÀÌ °ª
-vector<Info_route> graph[MAX_MAT][MAX_MAT]; // ´ÙÀÍ½ºÆ®¶ó ³ëµå Á¤º¸
+int N, M; // N: ì§€ë„ ë³€ì˜ ê¸¸ì´, M: í„°ë„ì˜ ê°¯ìˆ˜
+int MAT[MAX_MAT][MAX_MAT]; // ì§€ë„ ë†’ì´ ê°’
+vector<Info_route> graph[MAX_MAT][MAX_MAT]; // ë‹¤ìµìŠ¤íŠ¸ë¼ ë…¸ë“œ ì •ë³´
 Info_turnel tunnel[MAX_MAT];
 
 
@@ -89,8 +89,8 @@ int input()
 int dijk(point start)
 {
 	priority_queue<Info_route> pq;
-	int fuel[MAX_MAT][MAX_MAT]; // °¢ ÁÂÇ¥¸¶´Ù ÃÖ¼Ò °¡ µÇ´Â ¿¬·á¾ç ÀúÀå ÇÒ °ÅÀÓ
-	// ÁÂÇ¥¸¶´Ù ¿¬·á °ªÀ» MAX·Î ÃÊ±âÈ­
+	int fuel[MAX_MAT][MAX_MAT]; // ê° ì¢Œí‘œë§ˆë‹¤ ìµœì†Œ ê°€ ë˜ëŠ” ì—°ë£Œì–‘ ì €ìž¥ í•  ê±°ìž„
+	// ì¢Œí‘œë§ˆë‹¤ ì—°ë£Œ ê°’ì„ MAXë¡œ ì´ˆê¸°í™”
 	for (int i = 0; i < MAX_MAT; i++)
 		for (int j = 0; j < MAX_MAT; j++)
 			fuel[i][j] = MAX;
@@ -103,7 +103,7 @@ int dijk(point start)
 		Info_route now = pq.top();
 		pq.pop();
 
-		// pq¿¡¼­ ³ª¿Â now º¸´Ù ÀÌ¹Ì ÀûÀº ¿¬·á°¡ µå´Â °æ¿ì°¡ fuel¿¡ ÀÖÀ¸¸é
+		// pqì—ì„œ ë‚˜ì˜¨ now ë³´ë‹¤ ì´ë¯¸ ì ì€ ì—°ë£Œê°€ ë“œëŠ” ê²½ìš°ê°€ fuelì— ìžˆìœ¼ë©´
 		if (fuel[now.to.y][now.to.x] < now.fuel) continue;
 
 		for (int i = 0; i < graph[now.to.y][now.to.x].size(); i++)
@@ -111,7 +111,7 @@ int dijk(point start)
 			Info_route next = graph[now.to.y][now.to.x][i];
 			next.fuel = next.fuel + now.fuel;
 
-			// ÀÌ¹Ì Å½»ö µÈ ÁÂÇ¥¸é
+			// ì´ë¯¸ íƒìƒ‰ ëœ ì¢Œí‘œë©´
 			if (fuel[next.to.y][next.to.x] <= next.fuel) continue;
 
 			fuel[next.to.y][next.to.x] = next.fuel;
@@ -119,14 +119,14 @@ int dijk(point start)
 		}
 	}
 
-	return fuel[N][N]; // N, N Á¦ÀÏ ÂªÀº °æ·Î
+	return fuel[N][N]; // N, N ì œì¼ ì§§ì€ ê²½ë¡œ
 }
 
 int solve_func()
 {
 
-	// ´ÙÀÍ½ºÆ®¶ó ÇÏ±â À§ÇØ ³ëµå ¿¬°á ÇØÁÖ±â 
-	// 1. µ¿¼­³²ºÏ ¹æÇâ ³ëµå vector¿¡ ÀúÀå
+	// ë‹¤ìµìŠ¤íŠ¸ë¼ í•˜ê¸° ìœ„í•´ ë…¸ë“œ ì—°ê²° í•´ì£¼ê¸° 
+	// 1. ë™ì„œë‚¨ë¶ ë°©í–¥ ë…¸ë“œ vectorì— ì €ìž¥
 	for (int i = 1; i <= N; i++)
 	{
 		for (int j = 1; j <= N; j++)
@@ -134,24 +134,24 @@ int solve_func()
 
 			for (int k = 0; k < 2; k++)
 			{
-				// i, j °¡ from
+				// i, j ê°€ from
 				point to;
 				to.y = i + ry[k];
 				to.x = j + rx[k];
 
 				if (MAT[to.y][to.x] == -1) continue;
 
-				// to °¡ from ³ôÀÌ º¸´Ù Å©¸é 
-				// Á¤¹æÇâ¿¡ µå´Â ¿¬·á = ³ôÀÌ * 2
-				// ¿ª¹æÇâ¿¡ µå´Â ¿¬·á = 0
+				// to ê°€ from ë†’ì´ ë³´ë‹¤ í¬ë©´ 
+				// ì •ë°©í–¥ì— ë“œëŠ” ì—°ë£Œ = ë†’ì´ * 2
+				// ì—­ë°©í–¥ì— ë“œëŠ” ì—°ë£Œ = 0
 				if (MAT[to.y][to.x] > MAT[i][j])
 				{
 					graph[i][j].push_back({ to, (MAT[to.y][to.x] - MAT[i][j]) * 2 });
 					graph[to.y][to.x].push_back({ { i, j }, 0 });
 				}
-				// to °¡ from ³ôÀÌ º¸´Ù ÀÛÀ¸¸é
-				// Á¤¹æÇâ¿¡ µå´Â ¿¬·á = 0
-				// ¿ª¹æÇâ¿¡ µå´Â ¿¬·á = ³ôÀÌ * 2
+				// to ê°€ from ë†’ì´ ë³´ë‹¤ ìž‘ìœ¼ë©´
+				// ì •ë°©í–¥ì— ë“œëŠ” ì—°ë£Œ = 0
+				// ì—­ë°©í–¥ì— ë“œëŠ” ì—°ë£Œ = ë†’ì´ * 2
 				else if (MAT[to.y][to.x] < MAT[i][j])
 				{
 					graph[i][j].push_back({ to, 0 });
@@ -165,7 +165,7 @@ int solve_func()
 			}
 		}
 	}
-	// turnel ³ëµå ±â·Ï
+	// turnel ë…¸ë“œ ê¸°ë¡
 	for (int i = 0; i < M; i++)
 	{
 		graph[tunnel[i].pt1.y][tunnel[i].pt1.x].push_back({ tunnel[i].pt2, tunnel[i].fuel });
