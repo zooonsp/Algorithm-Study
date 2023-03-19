@@ -4,15 +4,17 @@
 #define sws ios::sync_with_stdio(false), cin.tie(NULL);
 using namespace std;
 
+using ll = long long;
+
 int N;
 int volt[200000]; // 전압
 // psum[now]: 0번 idx부터 now번 idx까지의 전압 부분합
-int psum[200000];
+ll psum[200000];
 // zeroCnt[now]: 0번 idx부터 now번 idx까지의 전압 부분합 중 0의 개수
 int zeroCnt[200000];
 int ans = 0;
 // 전압 부분합에서 해당 숫자가 몇 번 나왔는지 count할 unordered_map
-unordered_map<int, int> um;
+unordered_map<ll, int> um;
 
 int main(void) {
   sws;
@@ -21,14 +23,12 @@ int main(void) {
     cin >> volt[i];
 
   psum[0] = volt[0];
-
-  for (int i = 1; i < N; i++) // 부분합 계산
-    psum[i] = psum[i - 1] + volt[i];
-
   zeroCnt[0] = (psum[0] == 0);
 
-  for (int i = 1; i < N; i++) // 부분합 중 0의 개수 count
-    zeroCnt[i] = zeroCnt[i - 1] + (psum[i] == 0);
+  for (int i = 1; i < N; i++) {
+    psum[i] = psum[i - 1] + volt[i];              // 부분합 계산
+    zeroCnt[i] = zeroCnt[i - 1] + (psum[i] == 0); // 부분합 중 0의 개수 count
+  }
 
   // 아무것도 조작하지 않았을 때 전압이 0으로 만들어지는 횟수
   ans = zeroCnt[N - 1];
