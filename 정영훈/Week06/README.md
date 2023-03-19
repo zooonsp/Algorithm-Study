@@ -11,6 +11,8 @@
 - 내 접근 : UnionFind (결합하고 해제하는 과정이 있어서)
 - [해설 링크](https://tech.kakao.com/2023/01/25/2023-kakao-recruitment-round-1/#elementor-toc__heading-anchor-6)
 
+    ![표 병합](https://user-images.githubusercontent.com/75352656/226152691-5f8edb72-ab60-4ef8-928d-ff69eebdd578.png)
+
 ### UnionFind
 - [항상 디버깅 후 생각 나는 주의 사항](https://sangwoo0727.github.io/algorithm/Algorithm-UnionFind/)
 
@@ -21,6 +23,8 @@
 - 내 초기 접근 : 다 누적합 만들면서 새로 계산 -> TLE..
 - 새로운 접근 : 만들어 놓은 누적합을 이용하는 아이디어
 
+    ![안정적인 전압](https://user-images.githubusercontent.com/75352656/226152672-4d5593ff-51ff-44ab-a382-705e0713d978.png)
+
 
 </br>
 
@@ -29,6 +33,8 @@
 - 내 접근 : 요구 조건 만족하도록 구현
 - 생긴 문제 : vector로 동적할당을 통해 매번 Map을 만드는 경우 시간 초과 발생 -> 그냥 배열을 사용해서 해결
 
+    ![핀볼 게임](https://user-images.githubusercontent.com/75352656/226152694-f24bc628-6d69-4d84-a2c2-d65921459006.png)
+
 </br>
 
 ## 연구소3
@@ -36,3 +42,4 @@
 - 내 접근 : DFS(모든 조합) + BFS(찾은 조합으로 계산)
 - 최소 시간이라 가지치기가 가능
 
+    ![연구소3](https://user-images.githubusercontent.com/75352656/226152688-349d1cec-0849-4823-817c-35d3a02d375b.png)
