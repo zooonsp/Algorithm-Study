@@ -9,10 +9,10 @@ int ans;	// ans: 정답
 int dirY[] = { 0, 1, 0, -1 };
 int dirX[] = { 1, 0, -1, 0 };
 
-void func(int startY, int startX, int curY, int curX, int dir, int depth, int score) {	// 시작위치 y, x, 현재 위치 y, x, 방향 dir, 깊이, 점수
+void func(int startY, int startX, int curY, int curX, int dir, int depth, int score) {	// 시작 위치 y, x, 현재 위치 y, x, 방향 dir, 깊이, 점수
 
 	while (1) {
-		if (depth != 0) {	// 처음에 시작할 때 시작위치 현재 위치인 것을 거르기 위함
+		if (depth != 0) {	// 처음에 시작할 때 시작 위치 현재 위치인 것을 거르기 위함
 			if (startY == curY && startX == curX) {	// 시작 위치로 돌아옴
 				ans = std::max(ans, score);
 				return;
