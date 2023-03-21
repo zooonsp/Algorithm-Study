@@ -1,7 +1,7 @@
 ## 연구소3
-> empty_cnt : 빈공간의 수
-> fill_cnt : bfs에서 채워지는 빈공간 수
-> virus_select : dfs 한 경우에 선택된 M개의 바이러스가 무엇인지 의미
+> empty_cnt : 빈공간의 수 <br/>
+> fill_cnt : bfs에서 채워지는 빈공간 수 <br/>
+> virus_select : dfs 한 경우에 선택된 M개의 바이러스가 무엇인지 의미 <br/>
 > MAT_COPY : 복사한 좌표 정보, bfs 한번 할 때마다 복사 하며 탐색한 위치 체크
 
 - 바이러스, 벽이 없는 빈 공간을 카운팅 한다.
@@ -35,7 +35,7 @@
 <br/>
 
 ## 표병합
-> parent : 2차원으로 Union-Find 해주기 위한 해당 좌표의 부모 배열
+> parent : 2차원으로 Union-Find 해주기 위한 해당 좌표의 부모 배열 <br/>
 > graph : 표의 해당좌표에 저장 되는 문자열 (가장 상위 부모의 값만)
  - union find를 위해 초기화 해준다. 나중에 출력을 위해 graph도 "EMPTY"로 초기화 한다.
  - sstream 으로 하나의 명령어를 공백별로 파싱한다.
