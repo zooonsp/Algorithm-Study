@@ -25,7 +25,7 @@ struct coordi {
 
 int N;
 int MAT[MAT_MAX][MAT_MAX];
-vector <coordi> wormhole[10];
+vector <coordi> wormhole[15];
 
 
 

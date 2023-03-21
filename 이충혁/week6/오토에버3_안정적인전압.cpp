@@ -15,12 +15,12 @@ int input()
     cin >> N;
 
     cin >> ori_arr[0];
-
+   
 
     for (int i = 0; i < N; i++)
     {
         cin >> ori_arr[i];
-
+        
         if (i == 0)
         {
             add_arr[i] = ori_arr[i];
@@ -43,7 +43,7 @@ int input()
 
         if (DAT.find(add_arr[i]) == DAT.end())
         {
-            DAT.insert({ add_arr[i], 1 });
+            DAT.insert({ add_arr[i], 1});
         }
         else
         {
@@ -63,7 +63,7 @@ int solve_func()
     for (int i = 0; i < N; i++)
     {
         int zero_now = 0; // 이번 index의 0 개수
-
+        
         if (i != 0) // 현재 바뀌는 값의 left에 있는 0 개수를 더함
         {
             zero_now += zero_cnt[i - 1];
@@ -73,7 +73,7 @@ int solve_func()
         if (DAT.find(ori_arr[i]) != DAT.end())
         {
             zero_now += DAT[ori_arr[i]];
-
+        
         }
 
         DAT[add_arr[i]]--;
@@ -91,7 +91,7 @@ int main()
     //freopen("input.txt", "r", stdin);
 
     input();
-
+    
 
     cout << solve_func();
     return 0;

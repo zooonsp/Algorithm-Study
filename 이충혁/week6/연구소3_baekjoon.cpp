@@ -110,18 +110,8 @@ int bfs()
         }
     }
 
-    // 모두 다 번식 했는지 확인
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < N; j++)
-        {
-            if (MAT_COPY[i][j] == 0)
-                return 0;
-        }
 
-    }
-
-    if (ans > max_cnt)
+    if (ans > max_cnt && fill_cnt == empty_cnt)
         ans = max_cnt;
 
     return 0;
