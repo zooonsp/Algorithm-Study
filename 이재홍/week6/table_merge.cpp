@@ -48,8 +48,6 @@ RC find(const RC &rc) {
 void update(const int &r, const int &c, const string &value) {
     // go to representative cell of merged cells
     RC cell = find({r, c});
-    // delete if value exists
-    table_value[cell.r][cell.c].clear();
     // write new value
     table_value[cell.r][cell.c] = value;
     return;
@@ -67,7 +65,6 @@ void update(const string &value1, const string &value2) {
             if(table_value[cell.r][cell.c].compare(value1)) {visited[cell.r][cell.c] = 1; continue;}
             // process
             visited[cell.r][cell.c] = 1;
-            table_value[cell.r][cell.c].clear();
             table_value[cell.r][cell.c] = value2;
         }
     }
