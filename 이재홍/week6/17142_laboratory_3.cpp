@@ -54,8 +54,8 @@ void floodFill() {
             Coor now = q.front();
             q.pop();
             // backtracking
-            for(int i = 0; i < DIR; ++i) {
-                Coor next = now + d[i];
+            for(int dir = 0; dir < DIR; ++dir) {
+                Coor next = now + d[dir];
                 // pruning
                 if(field[next.y][next.x] == WALL) {continue;}
                 if(visited[next.y][next.x]) {continue;}
@@ -131,10 +131,10 @@ int main() {
     if(!zeros) {cout << 0; return 0;}
     // put fence around field
     for(int i = 1; i <= fieldLen; ++i) {
-        field[0][i] = 1;
-        field[i][0] = 1;
-        field[fieldLen + 1][i] = 1;
-        field[i][fieldLen + 1] = 1;
+        field[0][i] = WALL;
+        field[i][0] = WALL;
+        field[fieldLen + 1][i] = WALL;
+        field[i][fieldLen + 1] = WALL;
     }
     // run dfs
     dfs(0, virusToSelect);
