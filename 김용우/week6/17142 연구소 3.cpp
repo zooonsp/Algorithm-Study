@@ -24,7 +24,7 @@ int spread() {
 	for (int j = 0; j < N; j++) {
 		for (int i = 0; i < N; i++) {
 			if (MAP[j][i] == 1) {	// 벽인 경우
-				tmpMAP[j][i] = -1;	// -1
+				tmpMAP[j][i] = -1;	// 벽 -1
 			}
 			else if (MAP[j][i] == 2) {	// 바이러스인 경우
 				tmpMAP[j][i] = 0;	// 0
