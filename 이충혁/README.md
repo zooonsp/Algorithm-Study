@@ -40,11 +40,21 @@
 
 <br></br>
 
-### Week 04 (23.03.06 ~ 23.03.16)
+### Week 05 (23.03.06 ~ 23.03.16)
 | 제목 | 풀이 | 시간 |
 | :---: | :---: | :---: |
 | [머리 맞대기](https://pro.mincoding.co.kr/problem-step/7/level/108/detail/M4_04) | Parametric search, Prefix sum | TIME OVER
 | [프로세서 연결하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf) | DFS | 02 : 36
 | [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | DP, bottom-up | TIME OVER
+
+<br></br>
+
+### Week 06 (23.03.17 ~ 23.03.21)
+| 제목 | 풀이 | 시간 |
+| :---: | :---: | :---: |
+| [연구소3](https://www.acmicpc.net/problem/17142) | DFS, BFS | 02 : 28
+| [안정적인 전압](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/Hyundai_03) | Prefix sum, DAT | 02 : 18
+| [핀볼게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo) | 시뮬레이션 | TIME OVER
+| [표병합](https://school.programmers.co.kr/learn/courses/30/lessons/150366) | Union-Find | TIME OVER
 
 
