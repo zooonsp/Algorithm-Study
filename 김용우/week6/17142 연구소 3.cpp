@@ -7,7 +7,7 @@ struct Coordinate {	// 좌표
 };
 
 int N, M;	// N: 연구소의 크기, M: 놓을 수 있는 바이러스의 개수
-int MAP[52][52];	// MAP[j][i]: 연구소 j행 i열의 상태
+int MAP[52][52];	// MAP[i][j]: 연구소 i 행 j 열의 상태
 Coordinate virus[12];	// virus[i]: i 바이러스의 위치
 int virusNum;	// virusNum: 총 바이러스의 개수
 int visited[12];	// visited[i]: i 바이러스 활성화 여부, 1 활성화 0 비활성화
@@ -24,7 +24,7 @@ int spread() {
 	for (int j = 0; j < N; j++) {
 		for (int i = 0; i < N; i++) {
 			if (MAP[j][i] == 1) {	// 벽인 경우
-				tmpMAP[j][i] = -1;	// -1
+				tmpMAP[j][i] = -1;	// 벽 -1
 			}
 			else if (MAP[j][i] == 2) {	// 바이러스인 경우
 				tmpMAP[j][i] = 0;	// 0
