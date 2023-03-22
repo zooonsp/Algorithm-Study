@@ -34,7 +34,15 @@
 ## Week 05 (23.03.06 ~ 23.03.12)
 | 제목 | 기록 사항 |
 | :---: | :---: |
-| [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | DFS -> 시간 초과 -> DP(빠뜨린 부분이 있었음) + DP 개념! |
+| [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | DFS => 시간 초과 => DP(빠뜨린 부분이 있었음) + DP 개념! |
 | [프로세서 연결하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf) | 시간 초과 당연히 날 줄 알았는데 그냥 되네(?) |
 | [머리 맞대기](https://pro.mincoding.co.kr/problem-step/7/level/108/detail/M4_04) | 팀을 어떻게 구성할지 생각하지 못했음 |
 | [구간 나누기2](https://www.acmicpc.net/problem/13397) | 머리 맞대기보다는 팀 구성 방법이 간단한 문제 |
+
+## Week 06 (23.03.13 ~ 23.03.19)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [표 병합](https://school.programmers.co.kr/learn/courses/30/lessons/150366) | UnionFind => 바로 parent 배열 이용하는 것이 아닌 Find 이용하기 |
+| [핀볼 게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo) | 벡터 - TLE |
+| [안정적인 전압](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/Hyundai_03) | 푸는 방법 생각 못 함 |
+| [연구소3](https://www.acmicpc.net/problem/17142) | DFS + BFS |
