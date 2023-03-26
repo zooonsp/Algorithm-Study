@@ -13,10 +13,8 @@ bool checkValid() {
     for(i = 0; i < n; ++i) {
         string str;
         cin >> str;
-        ll input = 1;
-        int strSize = str.size();
-        for(int i = 0; i < strSize; ++i) {input *= 10;}
-        input += stoll(str);
+        str = "1" + str;
+        ll input = stoll(str);
         // check if this number is included by others
         if(um[input] == 2) {res = false; break;}
         um[input] = 1;
