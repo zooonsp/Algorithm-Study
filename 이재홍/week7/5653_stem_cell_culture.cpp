@@ -74,7 +74,7 @@ void run_loop(int n) {
                     Coordinate next_p = now.p + d[dir];
                     // pruning
                     int field_val = field[next_p.y][next_p.x];
-                    if(field_val < 0) {continue;} // dead cell
+                    if(field_val < 0) {continue;} // division completed cell
                     else if(!field_val) { // not visited cell
                         field[next_p.y][next_p.x] = now.life;
                         nextCell.push(next_p);
