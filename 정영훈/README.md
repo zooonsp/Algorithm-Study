@@ -35,7 +35,7 @@
 | 제목 | 기록 사항 |
 | :---: | :---: |
 | [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668) | DFS => 시간 초과 => DP(빠뜨린 부분이 있었음) + DP 개념! |
-| [프로세서 연결하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf) | 시간 초과 당연히 날 줄 알았는데 그냥 되네(?) |
+| [프로세서 연결하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf) | 시간 초과 당연히 날 줄 알았는데 그냥 되네 - Branch and Bound |
 | [머리 맞대기](https://pro.mincoding.co.kr/problem-step/7/level/108/detail/M4_04) | 팀을 어떻게 구성할지 생각하지 못했음 |
 | [구간 나누기2](https://www.acmicpc.net/problem/13397) | 머리 맞대기보다는 팀 구성 방법이 간단한 문제 |
 
@@ -46,3 +46,11 @@
 | [핀볼 게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo) | 벡터 - TLE |
 | [안정적인 전압](https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/Hyundai_03) | 푸는 방법 생각 못 함 |
 | [연구소3](https://www.acmicpc.net/problem/17142) | DFS + BFS |
+
+## Week 07 (23.03.20 ~ 23.03.26)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [자물쇠와 열쇠](https://school.programmers.co.kr/learn/courses/30/lessons/60059) | BruteForce |
+| [전화번호 목록](https://www.acmicpc.net/problem/5052) | Trie |
+| [스타트 택시](https://www.acmicpc.net/problem/19238) | 우선 순위 큐 + Flood Fill |
+| [줄기세포 배양](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRJ8EKe48DFAUo) | 우선 순위 큐 + FloodFill |
