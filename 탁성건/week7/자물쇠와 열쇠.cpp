@@ -18,9 +18,9 @@ bool solution(vector<vector<int>> key, vector<vector<int>> lock) {
   int M = key.size();
   int N = lock.size();
 
-  for (int dir = 0; dir < 4; dir++) {       // key를 4번 회전
-    for (int sy = 0; sy <= M + N; sy++) {   // key의 시작 y좌표 (0 ~ M+N)
-      for (int sx = 0; sx <= M + N; sx++) { // key의 시작 x좌표 (0 ~ M+N)
+  for (int dir = 0; dir < 4; dir++) {        // key를 4번 회전
+    for (int sy = 0; sy < M + N - 1; sy++) { // key의 시작 y좌표 (0 ~ M+N)
+      for (int sx = 0; sx < M + N - 1; sx++) { // key의 시작 x좌표 (0 ~ M+N)
 
         // board → lock의 상하좌우로 M 만큼의 여유 공간
         vector<vector<int>> board(N + M * 2, vector<int>(N + M * 2));
