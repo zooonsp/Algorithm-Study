@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <cstring>
 #include <iostream>
 #include <string>
@@ -12,6 +11,11 @@ struct Node {
   Node() {         // 생성자를 이용한 초기화
     isEnd = false;
     memset(child, 0, sizeof(child));
+  }
+  ~Node() {
+    for (int i = 0; i < 10; i++)
+      if (child[i] != nullptr)
+        delete child[i];
   }
 };
 
@@ -30,9 +34,6 @@ public:
       if (ptr->child[num] == nullptr) // num에 해당하는 child가 없다면 생성
         ptr->child[num] = new Node();
 
-      if (ptr->isEnd) // 이미 해당 전화번호로 끝난 경우가 있다면 false
-        return false;
-
       ptr = ptr->child[num]; // ptr이 child node를 가리키도록 변경
     }
 
@@ -49,6 +50,9 @@ public:
       int num = str[i] - '0';
 
       if (ptr->child[num] == nullptr) // num에 해당하는 child가 없다면 false
+        return false;
+
+      if (ptr->isEnd) // 전화번호의 끝인 경우 false
         return false;
 
       ptr = ptr->child[num]; // ptr이 child node를 가리키도록 변경
@@ -74,11 +78,12 @@ int main(void) {
     for (int i = 0; i < N; i++)
       cin >> phone[i];
 
-    sort(phone.begin(), phone.end()); // 오름차순 정렬
+    for (int i = 0; i < N; i++)
+      trie.insert(phone[i]);
 
     for (int i = 0; i < N; i++) {
-      if (!trie.insert(phone[i])) { // 접두어가 있다면
-        ans = "NO";                 // 일관성 있는 목록이 아니다.
+      if (!trie.find(phone[i])) { // 접두어가 있다면
+        ans = "NO";               // 일관성 있는 목록이 아니다.
         break;
       }
     }
