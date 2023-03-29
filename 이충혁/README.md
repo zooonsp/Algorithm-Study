@@ -57,4 +57,12 @@
 | [핀볼게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo) | 시뮬레이션 | TIME OVER
 | [표병합](https://school.programmers.co.kr/learn/courses/30/lessons/150366) | Union-Find | TIME OVER
 
+<br></br>
 
+### Week 07 (23.03.22 ~ 23.03.26)
+| 제목 | 풀이 | 시간 |
+| :---: | :---: | :---: |
+| [줄기세포 배양](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRJ8EKe48DFAUo) | 시뮬레이션, list | 02 : 57
+| [스타트 택시](https://www.acmicpc.net/problem/19238) | BFS | TIME OVER
+| [자물쇠와 열쇠](https://school.programmers.co.kr/learn/courses/30/lessons/60059) | 구현 | TIME OVER
+| [전화번호 목록](https://www.acmicpc.net/problem/5052) | Trie | 01 : 12
