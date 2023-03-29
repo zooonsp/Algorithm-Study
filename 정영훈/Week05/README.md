@@ -28,6 +28,10 @@
 - [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf)
 - 내 접근 : 완전 탐색(DFS)
     ![스터디 (17)(8)](https://user-images.githubusercontent.com/75352656/224534085-ebbbbb09-4beb-484f-bb16-65ed24d1fe19.png)
+    - 단순히 시간 복잡도를 계산하면 TC * 5^cores로 계산할 수 있음.
+    - 5^12 = 244140625, TC * 5^cores = 14,648,437,500이라는 엄청난 수가 나옴.
+    - 그렇다면 이 문제가 어떻게 완전 탐색으로 시간 내에 풀리는가? -> Branch And Bound
+    - 이론 상으로 계산한 모든 경우에 대한 확인을 다 하지 않는 경우가 생기기 때문임!
     
 
 ## 머리 맞대기
