@@ -54,3 +54,10 @@
 | [전화번호 목록](https://www.acmicpc.net/problem/5052) | Trie |
 | [스타트 택시](https://www.acmicpc.net/problem/19238) | 우선 순위 큐 + Flood Fill |
 | [줄기세포 배양](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRJ8EKe48DFAUo) | 우선 순위 큐 + FloodFill |
+
+## Week 08 (23.03.27 ~ 23.04.02)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [미로 탈출 명령어](https://school.programmers.co.kr/learn/courses/30/lessons/150365) | 탐색을 쓰지 않는 방법 |
+| [휴대폰 자판](https://www.acmicpc.net/problem/5670) | Trie |
+| [나무 재테크](https://www.acmicpc.net/problem/16235) | 구현, 시뮬레이션 |
