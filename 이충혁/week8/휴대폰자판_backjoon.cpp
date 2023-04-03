@@ -20,6 +20,17 @@ struct Trie {
 		node_cnt = 0;
 	}
 
+	~Trie() // 소멸자로 모두 해제 해줘야한다
+	{
+		for (int i = 0; i < TRIE_KIND; i++)
+		{
+			if (Node[i] != nullptr)
+			{
+				delete Node[i];
+			}
+		}
+	}
+
 	int insert(int index, string& str)
 	{
 		if (str.size() == index)
@@ -46,8 +57,8 @@ struct Trie {
 			return cnt;
 		}
 
-		if ((node_cnt > 1 || node_end == true)&&
-			(index != 0)) // node_cnt 와 node_end 부분을 따로 만들면 틀림 ( 타입 '한번'하면 맞는 가지로 들어가서)
+		if ((node_cnt > 1 || node_end == true) &&
+			index != 0) // node_cnt 와 node_end 부분을 따로 만들면 틀림 ( 타입 '한번'하면 맞는 가지로 들어가서)
 		{
 			cnt++;
 		}
@@ -64,19 +75,18 @@ int N; // 사전에 속한 단어 갯수
 int main()
 {
 	cin.tie(NULL)->sync_with_stdio(false);
-	freopen("input.txt", "r", stdin);
+	//freopen("input.txt", "r", stdin);
 
 	cout << fixed;
 	cout.precision(2);
 
 	while (cin >> N)
 	{
-
 		Trie* dictionary = new Trie();
 		vector<string> words;
 		words.resize(101010);
 		int ans = 0;
-		
+
 		for (int i = 0; i < N; i++)
 		{
 			string temp;
@@ -84,12 +94,15 @@ int main()
 			words[i] = temp;
 			dictionary->insert(0, temp);
 		}
+
 		for (int i = 0; i < N; i++)
 		{
 			ans += dictionary->find_cnt(0, words[i], 1);
 		}
 
-		cout << (double)((double)ans / N) << "\n";
+		cout << (double)ans / N << endl;
+
+		delete dictionary;
 	}
 
 	return 0;
