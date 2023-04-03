@@ -36,7 +36,7 @@ void simulation() {
         MAP[y][x] -= age;
         tree[y][x].push_back(age + 1);
 
-        // 5의 배수가 아니면 번식하지 않는다.
+        // 증가한 나이가 5의 배수가 아니면 번식하지 않는다.
         if ((age + 1) % 5 != 0)
           continue;
 
