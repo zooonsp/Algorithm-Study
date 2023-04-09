@@ -61,3 +61,10 @@
 | [미로 탈출 명령어](https://school.programmers.co.kr/learn/courses/30/lessons/150365) | 탐색을 쓰지 않는 방법 |
 | [휴대폰 자판](https://www.acmicpc.net/problem/5670) | Trie |
 | [나무 재테크](https://www.acmicpc.net/problem/16235) | 구현, 시뮬레이션 |
+
+## Week 09 (23.04.03 ~ 23.04.09)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [큐빙](https://www.acmicpc.net/problem/5373) | 구현(빠뜨린 부분 찾기) |
+| [구슬 탈출2](https://www.acmicpc.net/problem/13460) | 구현 |
+| [등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669) |  |
