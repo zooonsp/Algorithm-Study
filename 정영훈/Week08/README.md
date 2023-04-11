@@ -2,8 +2,8 @@
 | 제목 | 내 접근 | 링크 |
 | :---: | :---: | :---: |
 | [미로 탈출 명령어](#미로-탈출-명령어) | 수학 + 완전 탐색 | [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/150365) | 
-| [휴대폰 자판]() | Trie | [문제 링크](https://www.acmicpc.net/problem/5670) | 
-| [나무 재테크]() | 구현 | [문제 링크](https://www.acmicpc.net/problem/16235) |
+| [휴대폰 자판](#휴대폰-자판) | Trie | [문제 링크](https://www.acmicpc.net/problem/5670) | 
+| [나무 재테크](#나무-재테크) | 구현 | [문제 링크](https://www.acmicpc.net/problem/16235) |
 
 ## 미로 탈출 명령어
 - [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/150365)
