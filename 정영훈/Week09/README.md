@@ -10,6 +10,7 @@
 ## 큐빙
 - [문제 링크](https://www.acmicpc.net/problem/5373)
 - 내 접근 : 모든 경우 구현.
+- [큐브 사이트](https://rubikscu.be/)
 - 놓치는 경우가 많았음!
   ![큐빙](https://user-images.githubusercontent.com/75352656/231243571-870708a9-146c-4056-8f30-ff5ea7f51d8c.png)
 
