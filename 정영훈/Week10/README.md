@@ -13,6 +13,7 @@
 
 ## LCA2
 - [문제 링크](https://www.acmicpc.net/problem/11438)
+- 널널 한 버전 : [문제 링크](https://www.acmicpc.net/problem/11437)
 - 내 접근 : LCA(Sparse Table)
 
 ## 히히 못 가
