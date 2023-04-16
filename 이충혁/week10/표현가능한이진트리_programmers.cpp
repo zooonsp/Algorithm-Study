@@ -22,7 +22,7 @@ int dec_to_bin(long long num) {
 
 // 포화 이진트리를 만들기 위해 2^x - 1 만큼 0 채우기 
 // 작은 수 부터 채워서 그대로 push back 해도 됨
-int fill_dec()
+int fill_bin()
 {
     int full_size = 2;
     int bin_size = bin_num.size(); // size가 바뀌기 때문에 미리 저장해야함 !!
@@ -70,7 +70,7 @@ vector<int> solution(vector<long long> numbers) {
     {
         init();
         dec_to_bin(num);
-        fill_dec();
+        fill_bin();
         answer.push_back(possible_check(0, bin_num.size() - 1));
     }
     return answer;
