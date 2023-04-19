@@ -2,7 +2,7 @@
 #include <string>
 #include <cstring>
 #include <queue>
-#include <unordered_set>
+#include <set>
 using namespace std;
 
 const int MAT_MAX = 1010;
@@ -45,10 +45,10 @@ string MAT_str[MAT_MAX];
 int MAT[MAT_MAX][MAT_MAX] = { 0, };  // 그래프 만들 때 쓰기 위한 땅 number 저장
 int land_size = 0; // 알파벳은 겹치는 경우가 있다. 다시 num 붙여주면서 땅 칸수도 같이 세자
 int land_cnt[MAT_MAX * MAT_MAX] = { 0, }; // 각 땅별 칸 수
-unordered_set<int> us[MAT_MAX * MAT_MAX]; // us[from].find(set) 으로 연결이 되어있는지 용도로 쓸거임 
+set<int> us[MAT_MAX * MAT_MAX]; // us[from].find(set) 으로 연결이 되어있는지 용도로 쓸거임 
 
 vector<Info> graph[MAT_MAX * MAT_MAX];
-unordered_set<int> st_land, ed_land; // 시작 땅, 종료 땅
+set<int> st_land, ed_land; // 시작 땅, 종료 땅
 int dist[MAT_MAX * MAT_MAX];
 
 int ans = MAX_ANS;
@@ -84,7 +84,7 @@ int input()
         cin >> str;
         MAT_str[i] = ' ' + str;
     }
-    
+
     return 0;
 }
 
@@ -123,15 +123,30 @@ int bfs_cnt(coordi st)
     return 0;
 }
 
-int dijkstra(int st)
+int dijkstra()
 {
     // dijk init
-    for (int i = 1; i < land_size; i++)
+    for (int i = 1; i <= land_size; i++)
         dist[i] = MAX_ANS;
 
     priority_queue<Info> pq;
-    pq.push({ st, land_cnt[st] });
-    dist[st] = land_cnt[st];
+
+    for (int i = 1; i <= land_size; i++)
+    {
+        auto iter = st_land.find(i);
+        if (iter == st_land.end()) continue; // 시작 지점 아니면 건너 뜀
+
+        iter = ed_land.find(i);
+        if (iter != ed_land.end()) // 시작 지점이 곧 종료 지점이면 
+        {
+            if (ans > land_cnt[i])
+                ans = land_cnt[i];
+            continue;
+        }
+        pq.push({ i, land_cnt[i] });
+        dist[i] = land_cnt[i];
+    }
+
 
     while (!pq.empty())
     {
@@ -139,26 +154,22 @@ int dijkstra(int st)
         pq.pop();
         if (dist[now.to] < now.d)
             continue;
+
+        if (ed_land.find(now.to) != ed_land.end())
+        {
+            ans = dist[now.to];
+            return 0;
+        }
+
         for (auto next : graph[now.to])
         {
             int ndist = now.d + next.d;
             if (dist[next.to] <= ndist) continue;
             if (ans <= ndist) continue;
             dist[next.to] = ndist;
-      
-            pq.push({next.to, ndist});
+
+            pq.push({ next.to, ndist });
         }
-    }
-
-
-    for (int i = 0; i < land_size; i++)
-    {
-        auto iter = ed_land.find(i);
-        if (iter == ed_land.end()) continue;
-        
-        if (ans > dist[i])
-            ans = dist[i];
-
     }
 
     return 0;
@@ -166,8 +177,6 @@ int dijkstra(int st)
 
 int solve_func()
 {
-
-
     // 1. 연결된 부분 땅의 칸 수 세기
 
     for (int i = 1; i <= N; i++)
@@ -180,37 +189,37 @@ int solve_func()
             bfs_cnt({ i, j });
         }
     }
-   
+
     // 2. 그래프로 묶자 
     for (int i = 1; i <= N; i++)
     {
         for (int j = 1; j <= N; j++)
         {
             if (MAT[i][j] == 0) continue;
-            for (int k = 0; k < 4; k++) 
+            for (int k = 0; k < 4; k++)
             {
                 coordi next = { i, j };
                 next.y += cy[k];
                 next.x += cx[k];
 
-                
+
                 if (MAT[next.y][next.x] <= 0) continue; // 로미오 줄리엣, 울타리면 건너 뜀
                 if (MAT[next.y][next.x] == MAT[i][j]) continue; // 같은 땅이면 건너 뜀
-                
+
                 auto iter = us[MAT[i][j]].find(MAT[next.y][next.x]);
                 if (iter != us[MAT[i][j]].end()) continue;
-                
+
                 us[MAT[i][j]].insert(MAT[next.y][next.x]);
                 us[MAT[next.y][next.x]].insert(MAT[i][j]);
-              
+
                 graph[MAT[i][j]].push_back({ MAT[next.y][next.x], land_cnt[MAT[next.y][next.x]] });
                 graph[MAT[next.y][next.x]].push_back({ MAT[i][j] , land_cnt[MAT[i][j]] });
-          
+
             }
 
-      
+
             // 시작 지점 종료 지점도 이 루틴에서 같이 찾자
-            if (i == 1 || j == N)
+            if ((i == 1 || j == N) && !(i == 1 && j == 1))
             {
                 auto iter = st_land.find(MAT[i][j]);
                 if (iter == st_land.end())
@@ -218,8 +227,8 @@ int solve_func()
                     st_land.insert(MAT[i][j]);
                 }
             }
- 
-            if (i == N || j == 1)
+
+            if ((i == N || j == 1) && !(i == N && j == N))
             {
                 auto iter = ed_land.find(MAT[i][j]);
                 if (iter == ed_land.end())
@@ -227,35 +236,21 @@ int solve_func()
                     ed_land.insert(MAT[i][j]);
                 }
             }
-            
+
         }
     }
 
-    // 3. 다익스트라 여러번 돌리자
+    // 3. 다익스트라 시작지점 여러개 같이
+    dijkstra(); // ans 여기서 갱신
 
-    for (int i = 1; i < land_size; i++)
-    {
-        auto iter = st_land.find(i);
-        if (iter == st_land.end()) continue; // 시작 지점 아니면 건너 뜀
 
-        iter = ed_land.find(i);
-        if (iter != ed_land.end()) // 시작 지점이 곧 종료 지점이면 
-        {
-            if (ans > land_cnt[i])
-                ans = land_cnt[i];
-            continue;
-        }
-
-        dijkstra(i); // ans 여기서 갱신
-    }
-    
     return 0;
 }
 
 int main()
 {
     cin.tie(NULL)->sync_with_stdio(false);
-    //freopen("input.txt", "r", stdin);
+    freopen("input.txt", "r", stdin);
 
     init();
     input();
