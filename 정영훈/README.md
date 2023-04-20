@@ -67,4 +67,11 @@
 | :---: | :---: |
 | [큐빙](https://www.acmicpc.net/problem/5373) | 구현(빠뜨린 부분 찾기) |
 | [구슬 탈출2](https://www.acmicpc.net/problem/13460) | 구현 |
-| [등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669) |  |
+| [등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669) | Dijkstra 변형 |
+
+## Week 10 (23.04.10 ~ 23.04.16)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [표현 가능한 이진트리](https://school.programmers.co.kr/learn/courses/30/lessons/150367) | Divide And Conquer, Binary Tree |
+| [LCA2](https://www.acmicpc.net/problem/11438) | LCA(Sparse Table) |
+| [히히 못 가](https://www.acmicpc.net/problem/24515) | Dijkstra |

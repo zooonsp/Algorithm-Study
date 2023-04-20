@@ -10,6 +10,7 @@
 ## 큐빙
 - [문제 링크](https://www.acmicpc.net/problem/5373)
 - 내 접근 : 모든 경우 구현.
+- [큐브 사이트](https://rubikscu.be/)
 - 놓치는 경우가 많았음!
   ![큐빙](https://user-images.githubusercontent.com/75352656/231243571-870708a9-146c-4056-8f30-ff5ea7f51d8c.png)
 
@@ -25,5 +26,6 @@
 ## 등산코스 정하기
 - [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/118669)
 - [해설 링크](https://tech.kakao.com/2022/07/13/2022-coding-test-summer-internship/)
+- [유사 문제 링크](https://www.acmicpc.net/problem/13905)
 - 내 접근 : Dijkstra 변형
   ![등산코스 정하기](https://user-images.githubusercontent.com/75352656/231243586-becf88cc-5a3a-4581-a385-172113d18a21.png)
