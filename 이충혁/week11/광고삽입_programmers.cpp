@@ -6,7 +6,7 @@ using namespace std;
 const int MAX_SEC = 363636; // 3600 * 100시간
 
 int ab_cnt[MAX_SEC]; // 해당 시간의 광고 카운트
-int ab_sum[MAX_SEC]; // 해당 시간 광고 prefix sum
+long long ab_sum[MAX_SEC]; // 해당 시간 광고 prefix sum
 
 // 1. 시간이 다돌아도 360000 안되니까 각 시간마다 광고 몇개 하는지 센다.
 // 2. 시간 마다 광고 갯수 누적합 구해놓기
@@ -24,7 +24,7 @@ int strTosec(string s)
 string secTostr(int sec)
 {
     string ret = "";
-  
+
     ret += to_string(sec / 36000);
     ret += to_string((sec % 36000) / 3600);
     ret += ":";
@@ -44,12 +44,12 @@ string solution(string play_time, string adv_time, vector<string> logs) {
 
     int broad_time = strTosec(play_time); // 총 방송 시간 정수값
     int ad_time = strTosec(adv_time); // 광고 시간
-    int max_time = 0; // 최대 누적 광고시간
+    long long max_time = 0; // 최대 누적 광고시간
     int ans_int = 0;
 
     // 1. 시간마다 광고 카운트
-    for (auto log : logs) 
-    { 
+    for (auto log : logs)
+    {
         int st = strTosec(log.substr(0, 8));
         int ed = strTosec(log.substr(9));
 
@@ -70,7 +70,7 @@ string solution(string play_time, string adv_time, vector<string> logs) {
     ans_int = 0;
     for (int i = 0; i < broad_time - ad_time; i++)
     {
-        int temp = ab_sum[i + ad_time] - ab_sum[i];
+        long long temp = ab_sum[i + ad_time] - ab_sum[i];
         if (max_time < temp)
         {
             max_time = temp;
