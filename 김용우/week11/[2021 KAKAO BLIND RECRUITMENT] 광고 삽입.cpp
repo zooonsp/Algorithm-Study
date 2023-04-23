@@ -55,7 +55,7 @@ std::string solution(std::string play_time, std::string adv_time, std::vector<st
 
         if (ansCnt < cnt) {	// 공익광고를 보고 있는 시청자의 누적 재생 시간이 더 많다면 갱신
             ansTime = startTime + 1;
-            ansCnt = cnt;          
+            ansCnt = cnt;
         }
 
     }
