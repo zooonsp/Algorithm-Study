@@ -75,3 +75,10 @@
 | [표현 가능한 이진트리](https://school.programmers.co.kr/learn/courses/30/lessons/150367) | Divide And Conquer, Binary Tree |
 | [LCA2](https://www.acmicpc.net/problem/11438) | LCA(Sparse Table) |
 | [히히 못 가](https://www.acmicpc.net/problem/24515) | Dijkstra |
+
+## Week 11 (23.04.17 ~ 23.04.23)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [크루스칼의 공](https://www.acmicpc.net/problem/1396) | |
+| [광고 삽입](https://school.programmers.co.kr/learn/courses/30/lessons/72414) | |
+| [치즈](https://www.acmicpc.net/problem/2636) | DFS, BFS |
