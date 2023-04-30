@@ -37,7 +37,9 @@ void get_link(string &str, vector<string> &links) {
 }
 
 string filter_alphabet(string &str, string prefix, string suffix) {
-    string result = prefix;
+    string result;
+    result.reserve(str.size()); 
+    result += prefix;
     int str_size = str.size();
     for(int it = 0; it < str_size; ++it) {
         char ch = str[it] | 0x20;
