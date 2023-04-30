@@ -17,6 +17,7 @@
 - [문제 링크](https://www.acmicpc.net/problem/22949)
 - visited 배열에 관한 아이디어 (생각 못 함)
   - 회전 별로 visited 만들어 놓기!!
+  - 매 번 회전하지말고 회전 정보를 미리 구해놓고 해야 빠름!
 
 ## 매칭 점수
 - [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42893)
