@@ -94,7 +94,7 @@ vector<string> link_func(string& str)
 int solution(string word, vector<string> pages) {
     int answer = 0;
     int index_cnt = 0;
-    int max_score = 0;
+    double max_score = 0;
 
     capital_func(word);
     for (int i = 0; i < pages.size(); i++)
