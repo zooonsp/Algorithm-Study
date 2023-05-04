@@ -79,6 +79,13 @@
 ## Week 11 (23.04.17 ~ 23.04.23)
 | 제목 | 기록 사항 |
 | :---: | :---: |
-| [크루스칼의 공](https://www.acmicpc.net/problem/1396) | |
-| [광고 삽입](https://school.programmers.co.kr/learn/courses/30/lessons/72414) | |
+| [크루스칼의 공](https://www.acmicpc.net/problem/1396) | Parallel Binary Search |
+| [광고 삽입](https://school.programmers.co.kr/learn/courses/30/lessons/72414) | 누적 합 |
 | [치즈](https://www.acmicpc.net/problem/2636) | DFS, BFS |
+
+## Week 12 (23.04.24 ~ 23.04.30)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [백조의 호수](https://www.acmicpc.net/problem/3197) |  |
+| [회전 미로 탐색](https://www.acmicpc.net/problem/22949) | BFS, 구현 |
+| [매칭 점수](https://school.programmers.co.kr/learn/courses/30/lessons/42893) |  |
