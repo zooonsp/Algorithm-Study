@@ -25,3 +25,4 @@
   - [코드](https://latter2005.tistory.com/118)
   - [정규 표현식](https://hamait.tistory.com/342)
   - [모두의 코드](https://modoocode.com/303)
+  - [string 풀이](https://yabmoons.tistory.com/679)
