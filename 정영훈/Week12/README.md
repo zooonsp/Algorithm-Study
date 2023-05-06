@@ -1,9 +1,9 @@
 ## Week 12 (23.04.24 ~ 23.04.30)
-| 제목 | 내 접근 | 링크 |
-| :---: | :---: | :---: |
-| [백조의 호수](#백조의-호수) | UnionFind(못 품) | [문제 링크](https://www.acmicpc.net/problem/3197) |
-| [회전 미로 탐색](#회전-미로-탐색) | BFS, 구현 | [문제 링크](https://www.acmicpc.net/problem/22949) |
-| [매칭 점수](#매칭-점수) | | [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42893) |
+|               제목                |     내 접근      |                                     링크                                     |
+| :-------------------------------: | :--------------: | :--------------------------------------------------------------------------: |
+|    [백조의 호수](#백조의-호수)    | UnionFind(못 품) |              [문제 링크](https://www.acmicpc.net/problem/3197)               |
+| [회전 미로 탐색](#회전-미로-탐색) |    BFS, 구현     |              [문제 링크](https://www.acmicpc.net/problem/22949)              |
+|      [매칭 점수](#매칭-점수)      |                  | [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42893) |
 
 ## 백조의 호수
 - [문제 링크](https://www.acmicpc.net/problem/3197)
