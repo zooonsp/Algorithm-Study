@@ -38,6 +38,7 @@ void update_lazy(int node, int start, int end)
     }
 }
 
+// 바꾸는 구간이 모두 포함된 노드와 아닌 노드를 구별해서 업데이트
 void update(int node, int start, int end, int left, int right, long long diff)
 {
     update_lazy(node, start, end);
@@ -100,7 +101,7 @@ int solve_func()
             cin >> d;
 
   
-            update(1, 0, N - 1, b-1, c-1, d); // 리프노드만 따로 바꾸고 나머지는 업데이트 해주자
+            update(1, 0, N - 1, b-1, c-1, d);
           
         }
         else 
