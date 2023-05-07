@@ -15,22 +15,24 @@ struct SegTree {
     vector<long long>(sz).swap(tree);
     vector<long long>(sz).swap(lazy);
 
+    // segment tree 생성
+    // 1번 index가 root
     init(1, 1, nums.size(), nums);
   }
 
   long long init(int cur, int start, int end, const vector<long long> &nums) {
-    if (start == end)
+    if (start == end) // leaf node
       return tree[cur] = nums[start - 1];
 
-    int mid = start + (end - start) / 2;
+    int mid = start + (end - start) / 2; // 중간값 기준으로 나누기
     return tree[cur] = init(cur * 2, start, mid, nums) +
                        init(cur * 2 + 1, mid + 1, end, nums);
   }
 
   void updateLazy(const int cur, const int start, const int end) {
-    if (lazy[cur] != 0) {
-      tree[cur] += lazy[cur] * (end - start + 1);
-      if (start != end) {
+    if (lazy[cur] != 0) {                         // lazy가 0이 아닌 경우
+      tree[cur] += lazy[cur] * (end - start + 1); // 구간 길이만큼 더해준다.
+      if (start != end) {                         // 자식에게 전달
         lazy[cur * 2] += lazy[cur];
         lazy[cur * 2 + 1] += lazy[cur];
       }
@@ -40,14 +42,14 @@ struct SegTree {
 
   void updateTree(int cur, int start, int end, const int left, const int right,
                   const long long plus) {
-    updateLazy(cur, start, end);
+    updateLazy(cur, start, end); // lazy 갱신
 
     if (end < left || right < start)
       return;
 
-    if (left <= start && end <= right) {
-      tree[cur] += plus * (end - start + 1);
-      if (start != end) {
+    if (left <= start && end <= right) {     // 구간에 포함된다면
+      tree[cur] += plus * (end - start + 1); // 구간 길이만큼 더해준다.
+      if (start != end) { // 자식은 바로 업데이트 안 하고 lazy에 더해준다.
         lazy[cur * 2] += plus;
         lazy[cur * 2 + 1] += plus;
       }
@@ -62,7 +64,7 @@ struct SegTree {
 
   long long query(int cur, int start, int end, const int left,
                   const int right) {
-    updateLazy(cur, start, end);
+    updateLazy(cur, start, end); // lazy 갱신
 
     if (end < left || right < start)
       return 0;
