@@ -18,8 +18,8 @@ int dy[]{0, -1, 0, 1};
 int H, W;
 char MAP[102][102];
 int visited[102][102];
-bool isOpen[KEY_SIZE];
-vector<vector<Pos>> waiting;
+bool isOpen[KEY_SIZE]; // 해당 열쇠를 가지고 있는가?
+vector<vector<Pos>> waiting; // 문에 도달했는데 열쇠가 없는 경우 대기할 vector
 
 int main(void) {
   cin.tie(NULL)->sync_with_stdio(false);
@@ -41,6 +41,7 @@ int main(void) {
     H += 2;
     W += 2;
 
+    // 빌딩 가장자리를 빈 공간으로 채우기
     for (int y = 0; y < H; y++)
       MAP[y][0] = MAP[y][W - 1] = '.';
 
@@ -51,7 +52,7 @@ int main(void) {
     cin >> keys;
 
     if (keys != "0")
-      for (char key : keys)
+      for (char key : keys) // 이미 가지고 있는 열쇠 갱신
         isOpen[key - 'a'] = true;
 
     int ans = 0;
@@ -64,7 +65,7 @@ int main(void) {
       Pos now = q.front();
       q.pop();
 
-      if (MAP[now.y][now.x] == '$')
+      if (MAP[now.y][now.x] == '$') // 문서 획득
         ans++;
 
       for (int i = 0; i < 4; i++) {
@@ -82,15 +83,18 @@ int main(void) {
         if (ch == '*')
           continue;
 
+        // 문에 도달했는데 열쇠가 없는 경우 waiting으로 이동
         if (ch >= 'A' && ch <= 'Z' && !isOpen[ch - 'A']) {
           waiting[ch - 'A'].push_back({ny, nx});
           continue;
         }
 
+        // 열쇠를 처음 획득한 경우
         if (ch >= 'a' && ch <= 'z' && !isOpen[ch - 'a']) {
           int key = ch - 'a';
           isOpen[key] = true;
 
+          // 문을 열 수 있으므로 waiting에서 대기하고 있던 pos를 queue에 push
           for (Pos &pos : waiting[key])
             q.push(pos);
           vector<Pos>().swap(waiting[key]);
