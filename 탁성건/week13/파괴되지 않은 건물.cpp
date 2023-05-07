@@ -6,6 +6,7 @@ int solution(vector<vector<int>> board, vector<vector<int>> skill) {
   int answer = 0;
   const int N = board.size(), M = board[0].size();
 
+  // 2차원 누적합을 계산할 vector
   vector<vector<int>> sum(N + 1, vector<int>(M + 1));
 
   for (vector<int> &s : skill) {
@@ -23,14 +24,17 @@ int solution(vector<vector<int>> board, vector<vector<int>> skill) {
     sum[r2 + 1][c2 + 1] += degree;
   }
 
+  // row 누적합
   for (int r = 0; r < N; r++)
     for (int c = 0; c < M; c++)
       sum[r][c + 1] += sum[r][c];
 
+  // col 누적합
   for (int c = 0; c < M; c++)
     for (int r = 0; r < N; r++)
       sum[r + 1][c] += sum[r][c];
 
+  // board와 더하기
   for (int r = 0; r < N; r++)
     for (int c = 0; c < M; c++)
       if (board[r][c] + sum[r][c] > 0)
