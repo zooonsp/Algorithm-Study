@@ -96,3 +96,11 @@
 |                     [열쇠](https://www.acmicpc.net/problem/9328)                      |             BFS, 구현   (당황함)             |
 |               [구간 합 구하기 2](https://www.acmicpc.net/problem/10999)               | Segment Tree, Lazy Propagation (재귀로 구현) |
 | [파괴되지 않은 건물](https://school.programmers.co.kr/learn/courses/30/lessons/92344) |         구간 합  (못 품 - 해설 참고)         |
+
+## Week 14 (23.05.08 ~ 23.05.14)
+|                                         제목                                          |                  기록 사항                   |
+| :-----------------------------------------------------------------------------------: | :------------------------------------------: |
+|                     [트리의 순회](https://www.acmicpc.net/problem/2263)                      |            트리, 재귀(비재귀)            |
+|               [양과 늑대](https://school.programmers.co.kr/learn/courses/30/lessons/92343)               |  |
+| [연속합과 쿼리](https://www.acmicpc.net/problem/16993) |                |
+| [히스토그램](https://www.acmicpc.net/problem/1725) |                |
