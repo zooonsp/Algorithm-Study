@@ -41,7 +41,6 @@ void read_edges() {
 
 int dfs_find_max_cost_diameter(int node_id) {
     DAT[node_id] = 1;
-    int max_sub_cost = 0;
     Node &node = nodes[node_id];
     for(Edge &edge : node.edges) {
         if(DAT[edge.destination]) {continue;}
