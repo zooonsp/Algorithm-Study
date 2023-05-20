@@ -26,7 +26,7 @@
 <br></br>
 
 ## PR Table of This Week
-- 3[ 이재홍 ], 5[ 탁성건 ], 4[ 정영훈 ], 2[ 김용우 ], 1[ 이충혁 ]
+- 3[ 이재홍 ], 2[ 김용우 ], 1[ 이충혁 ], 5[ 탁성건 ], 4[ 정영훈 ]
 <br></br>
 
 ## PR & Commit Message Rule
