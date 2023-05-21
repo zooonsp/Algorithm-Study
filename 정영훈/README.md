@@ -102,5 +102,13 @@
 | :-----------------------------------------------------------------------------------: | :------------------------------------------: |
 |                     [트리의 순회](https://www.acmicpc.net/problem/2263)                      |            트리, 재귀(비재귀)            |
 |               [양과 늑대](https://school.programmers.co.kr/learn/courses/30/lessons/92343)               |  |
+| [연속합과 쿼리](https://www.acmicpc.net/problem/16993) |      다음주로 연기..          |
+| [히스토그램](https://www.acmicpc.net/problem/1725) |     다양한 풀이 존재(Segment Tree, Stack, Divide And Conquer)           |
+
+## Week 15 (23.05.15 ~ 23.05.21)
+|                                         제목                                          |                  기록 사항                   |
+| :-----------------------------------------------------------------------------------: | :------------------------------------------: |
+|                     [행성 터널](https://www.acmicpc.net/problem/2887)                      |   Minimum Spanning Tree       |
+|               [사라지는 발판](https://school.programmers.co.kr/learn/courses/30/lessons/92345)               |  |
 | [연속합과 쿼리](https://www.acmicpc.net/problem/16993) |                |
-| [히스토그램](https://www.acmicpc.net/problem/1725) |                |
+| [트리의 지름](https://www.acmicpc.net/problem/1167) |     트리, DFS      |
