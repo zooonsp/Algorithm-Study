@@ -20,6 +20,7 @@
 
 ## 연속합과 쿼리
 - [문제 링크](https://www.acmicpc.net/problem/16993)
+- Segment Tree ... 금광 세그!
 
 ## 트리의 지름
 - [문제 링크](https://www.acmicpc.net/problem/1167)
