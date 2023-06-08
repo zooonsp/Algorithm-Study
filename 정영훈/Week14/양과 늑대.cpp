@@ -1,4 +1,5 @@
-// 94.4 - TC 16번엔 누가 살고 있는 것인가..
+// https://wadekang.tistory.com/10 (하다가 안 되서 참고..)
+
 // 루트 노드에서 출발.
 // 양의 수보다 늑대의 수가 같거나 더 많아지면 모든 양을 잡아 먹음.
 // 양이 늑대에게 잡아먹히지 않도록 하면서 최대한 많은 수의 양을 모아서 다시 루트 노드로 돌아오기.
@@ -8,7 +9,6 @@
 #include <vector>
 #include <algorithm>
 #include <queue>
-#include <set>
 
 using namespace std;
 
@@ -16,13 +16,15 @@ using Graph = vector<vector<int>>;
 Graph graph;
 
 constexpr int WOLF = 1;
-constexpr int SHEEP = 0;
 
 struct Info
 {
-    int node, sheep, wolf, visitedBit;
-    Info(int n, int s, int w, int vb) : node(n), sheep(s), wolf(w), visitedBit(vb) {}
+    int sheep, wolf, visitedBit;
+    Info(int s, int w, int vb) : sheep(s), wolf(w), visitedBit(vb) {}
 };
+
+// visitedBit(방문했던 곳들의 좌표)가 정해지면 그에 해당하는 상태는 하나임. - 포인트!
+// 노드 정보를 저장할 필요 없음.
 
 int solution(vector<int> info, vector<vector<int>> edges)
 {
@@ -30,127 +32,47 @@ int solution(vector<int> info, vector<vector<int>> edges)
     int N = static_cast<int>(info.size());
     graph = vector<vector<int>>(N);
     const int ALLVISITED = (1 << N);
-    vector<int> sheep(N, 0);
-    vector<set<int>> sheepVisited(N);
-    vector<int> wolf(N, 0);
+    vector<int> visited(ALLVISITED, 0);
     for (vector<int> &edge : edges)
     {
-        int &from = edge[0], &to = edge[1];
+        int &from = edge[0], &to = edge[1]; // 부모 노드 -> 자식 노드 (문제 읽지도 않음..)
         graph[from].push_back(to);
-        graph[to].push_back(from);
+        // graph[to].push_back(from); - 필요 없음.
     }
 
     queue<Info> q;
-    q.push(Info(0, 1, 0, 1));
-    answer = sheep[0] = 1;
-    sheepVisited[0].insert(0);
+    q.push(Info(1, 0, 1));
+    answer = 1;
     while (!q.empty())
     {
         Info now = q.front();
         q.pop();
 
-        for (int &next : graph[now.node])
-        {
-            if (info[next] == WOLF)
-            {
-                if (now.visitedBit & (1 << next))
-                { // 기존에 감
-                    if (sheep[next] < now.sheep)
-                    {
-                        q.push(Info(next, now.sheep, now.wolf, now.visitedBit));
-                        wolf[next] = now.wolf;
-                        sheep[next] = now.sheep;
-                        sheepVisited[next].clear();
-                        sheepVisited[next].insert(now.visitedBit);
-                        answer = max(answer, sheep[next]);
-                    }
-                    else if (sheep[next] == now.sheep)
-                    {
-                        if (wolf[next] > now.wolf)
-                        {
-                            q.push(Info(next, now.sheep, now.wolf, now.visitedBit));
-                            wolf[next] = now.wolf;
-                            sheep[next] = now.sheep;
-                            sheepVisited[next].clear();
-                            sheepVisited[next].insert(now.visitedBit);
-                            answer = max(answer, sheep[next]);
-                        }
-                    }
-                }
-                else
-                { // 새로 방문
-                    if (now.wolf + 1 < now.sheep)
-                    {
-                        if (sheep[next] < now.sheep)
-                        {
-                            int newVisitedBit = now.visitedBit | (1 << next);
-                            q.push(Info(next, now.sheep, now.wolf + 1, newVisitedBit));
-                            wolf[next] = now.wolf + 1;
-                            sheep[next] = now.sheep;
-                            sheepVisited[next].clear();
-                            sheepVisited[next].insert(newVisitedBit);
-                            answer = max(answer, sheep[next]);
-                        }
-                        else if (sheep[next] == now.sheep)
-                        {
-                            int newVisitedBit = now.visitedBit | (1 << next);
-                            q.push(Info(next, now.sheep, now.wolf + 1, newVisitedBit));
-                            wolf[next] = now.wolf + 1;
-                            sheep[next] = now.sheep;
-                            sheepVisited[next].insert(newVisitedBit);
-                            answer = max(answer, sheep[next]);
-                        }
-                    }
-                }
-            }
-            else
-            { // SHEEP
-                if (now.visitedBit & (1 << next))
-                { // 기존에 감
-                    if (sheep[next] < now.sheep)
-                    {
-                        q.push(Info(next, now.sheep, now.wolf, now.visitedBit));
-                        wolf[next] = now.wolf;
-                        sheep[next] = now.sheep;
-                        sheepVisited[next].clear();
-                        sheepVisited[next].insert(now.visitedBit);
-                        answer = max(answer, sheep[next]);
-                    }
-                    else if (sheep[next] == now.sheep)
-                    {
-                        if (wolf[next] > now.wolf)
-                        {
-                            q.push(Info(next, now.sheep, now.wolf, now.visitedBit));
-                            wolf[next] = now.wolf;
-                            sheep[next] = now.sheep;
-                            sheepVisited[next].clear();
-                            sheepVisited[next].insert(now.visitedBit);
-                            answer = max(answer, sheep[next]);
-                        }
-                        else if (wolf[next] == now.wolf)
-                        {
-                            if (sheepVisited[next].find(now.visitedBit) == sheepVisited[next].end())
-                            {
-                                q.push(Info(next, now.sheep, now.wolf, now.visitedBit));
-                                wolf[next] = now.wolf;
-                                sheep[next] = now.sheep;
-                                sheepVisited[next].insert(now.visitedBit);
-                                answer = max(answer, sheep[next]);
-                            }
-                        }
-                    }
-                }
-                else
+        for (int i{}; i < N; ++i)
+        { // bitfield DP처럼
+            if (now.visitedBit & (1 << i))
+            { // 현재 방문한 정점인 경우 확장
+                for (int &next : graph[i])
                 {
-                    if (sheep[next] < now.sheep + 1)
+                    if (now.visitedBit & (1 << next))
+                        continue; // 이미 방문
+                    int newVisit = now.visitedBit | (1 << next);
+                    if (visited[newVisit])
+                        continue; // 이미 해당 상태는 체크 완료
+
+                    if (info[next] == WOLF)
                     {
-                        int newVisitedBit = now.visitedBit | (1 << next);
-                        q.push(Info(next, now.sheep + 1, now.wolf, newVisitedBit));
-                        wolf[next] = now.wolf;
-                        sheep[next] = now.sheep + 1;
-                        sheepVisited[next].clear();
-                        sheepVisited[next].insert(newVisitedBit);
-                        answer = max(answer, sheep[next]);
+                        if (now.wolf + 1 >= now.sheep)
+                            continue; // 못 감
+                        visited[newVisit] = 1;
+                        answer = max(answer, now.sheep);
+                        q.push(Info(now.sheep, now.wolf + 1, newVisit));
+                    }
+                    else
+                    {
+                        visited[newVisit] = 1;
+                        answer = max(answer, now.sheep + 1);
+                        q.push(Info(now.sheep + 1, now.wolf, newVisit));
                     }
                 }
             }
@@ -173,7 +95,7 @@ int main()
 
     // 12, 16
     // https://school.programmers.co.kr/questions/44699
-    vector<int> info2{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    vector<int> info2{0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0};
     vector<vector<int>> edges2{{0, 1}, {1, 2}, {1, 4}, {0, 8}, {8, 7}, {9, 10}, {9, 11}, {4, 3}, {6, 5}, {4, 6}, {8, 9}};
     cout << solution(info2, edges2) << '\n';
 

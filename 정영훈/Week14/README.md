@@ -2,9 +2,9 @@
 | 제목 | 내 접근 | 링크 |
 | :--: | :--: | :--: |
 | [트리의 순회](#트리의-순회) | 트리, 재귀(비재귀) | [문제 링크](https://www.acmicpc.net/problem/2263) | 
-| [양과 늑대](#양과-늑대) | | [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/92343) |        
+| [양과 늑대](#양과-늑대) | BitField + BFS | [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/92343) |        
 | [연속합과 쿼리](#연속합과-쿼리) | | [문제 링크](https://www.acmicpc.net/problem/16993) |                |
-| [히스토그램](#히스토그램) | | [문제 링크](https://www.acmicpc.net/problem/1725) |                |
+| [히스토그램](#히스토그램) | DivideAndConquer | [문제 링크](https://www.acmicpc.net/problem/1725) |                |
 
 ## 트리의 순회
 - [문제 링크](https://www.acmicpc.net/problem/2263)
@@ -13,7 +13,7 @@
 
 ## 양과 늑대
 - [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/92343)
-- 내 접근 : 
+- 내 접근 : BitField + BFS
 
 ## 연속합과 쿼리
 - [문제 링크](https://www.acmicpc.net/problem/16993)
@@ -21,4 +21,4 @@
 
 ## 히스토그램
 - [문제 링크](https://www.acmicpc.net/problem/1725)
-- 내 접근 : 
+- 내 접근 : DivideAndConquer
