@@ -80,7 +80,6 @@ void dfs(int level, Pos now, int pushCnt) {
   for (int cardType = 1; cardType <= maxCardType; cardType++) {
     if (!cardExist[cardType])
       continue;
-    cardExist[cardType] = false;
 
     Pos pos0 = cardPos[cardType][0];
     Pos pos1 = cardPos[cardType][1];
@@ -88,13 +87,13 @@ void dfs(int level, Pos now, int pushCnt) {
     int dist0to1 = bfs(now, pos0) + bfs(pos0, pos1) + 2;
     int dist1to0 = bfs(now, pos1) + bfs(pos1, pos0) + 2;
 
+    cardExist[cardType] = false;
     MAP[pos0.y][pos0.x] = MAP[pos1.y][pos1.x] = 0;
 
     dfs(level + 1, pos1, pushCnt + dist0to1);
     dfs(level + 1, pos0, pushCnt + dist1to0);
 
     MAP[pos0.y][pos0.x] = MAP[pos1.y][pos1.x] = cardType;
-
     cardExist[cardType] = true;
   }
 }
