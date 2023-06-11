@@ -58,6 +58,8 @@ int bfs(int permi_now)
                 q.push(next);
             }
 
+            next.pt = now.pt; // 바로 다음에 카드가 있는경우를 고려하기 위해 다시 초기화 해주자
+
             // ctrl 눌렀을 때 bfs의 경우도 세어야한다.
             while (next.pt.y + dy[i] >= 0 && next.pt.y + dy[i] < 4 &&
                 next.pt.x + dx[i] >= 0 && next.pt.x + dx[i] < 4)
@@ -76,7 +78,7 @@ int bfs(int permi_now)
         }
     }
 
-    
+
     return 0;
 }
 
@@ -132,9 +134,9 @@ int main()
 {
     int ans;
     //ans = solution({ {1, 0, 0, 3},{2, 0, 0, 0},{0, 0, 0, 2 }, { 3, 0, 1, 0 }}, 1, 0);
-    ans = solution({ {3, 0, 0, 2},{0, 0, 1, 0},{0, 1, 0, 0},{2, 0, 0, 3}}, 0,	1);
+    ans = solution({ {3, 0, 0, 2},{0, 0, 1, 0},{0, 1, 0, 0},{2, 0, 0, 3} }, 0, 1);
     //ans = solution({ {0, 0, 0, 1},{0, 0, 0, 0},{0, 1, 0, 0},{0, 0, 0, 0} }, 0, 3);
-    
+
     cout << ans;
     return 0;
 }
