@@ -129,7 +129,7 @@
 |               [카드 짝 맞추기](https://school.programmers.co.kr/learn/courses/30/lessons/72415?language=cpp)               | 완전 탐색(DFS, BFS) |
 | [도로 네트워크](https://www.acmicpc.net/problem/3176) |      LCA(Lowest Common Ancestor) - Sparse Table          |
 
-## Week16 (23.06.19 ~ 23.06.25)
+## Week17 (23.06.19 ~ 23.06.25)
 |                                         제목                                          |                  기록 사항                   |
 | :-----------------------------------------------------------------------------------: | :------------------------------------------: |
 |                     [책 나눠주기](https://www.acmicpc.net/problem/9576)                      |   Greedy, Bipartite Matching    |
