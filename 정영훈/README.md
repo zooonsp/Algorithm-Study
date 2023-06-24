@@ -119,9 +119,19 @@
 ## (23.05.29 ~ 23.06.04)
 - 계절학기 및 SSAFY MeetUP + 마무리를 위해서.. 휴식.!
 
-## Week16 (23.06.05 ~ 23.06.11)
+## (23.06.05 ~ 23.06.11)
+- 한 주 더 휴가..
+
+## Week16 (23.06.12 ~ 23.06.18)
 |                                         제목                                          |                  기록 사항                   |
 | :-----------------------------------------------------------------------------------: | :------------------------------------------: |
 |                     [RGB 거리2](https://www.acmicpc.net/problem/17404)                      |   DP    |
 |               [카드 짝 맞추기](https://school.programmers.co.kr/learn/courses/30/lessons/72415?language=cpp)               | 완전 탐색(DFS, BFS) |
 | [도로 네트워크](https://www.acmicpc.net/problem/3176) |      LCA(Lowest Common Ancestor) - Sparse Table          |
+
+## Week16 (23.06.19 ~ 23.06.25)
+|                                         제목                                          |                  기록 사항                   |
+| :-----------------------------------------------------------------------------------: | :------------------------------------------: |
+|                     [책 나눠주기](https://www.acmicpc.net/problem/9576)                      |   Greedy, Bipartite Matching    |
+|               [다단계 칫솔 판매](https://school.programmers.co.kr/learn/courses/30/lessons/77486)               | 요구사항 구현 |
+| [금광](https://www.acmicpc.net/problem/10167) |      금광 Segment Tree          |
