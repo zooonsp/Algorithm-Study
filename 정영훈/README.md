@@ -112,3 +112,16 @@
 |               [사라지는 발판](https://school.programmers.co.kr/learn/courses/30/lessons/92345)               |  |
 | [연속합과 쿼리](https://www.acmicpc.net/problem/16993) |                |
 | [트리의 지름](https://www.acmicpc.net/problem/1167) |     트리, DFS      |
+
+## (23.05.22 ~ 23.05.28)
+- SSAFY 종합 Project로 인해 휴식.!
+
+## (23.05.29 ~ 23.06.04)
+- 계절학기 및 SSAFY MeetUP + 마무리를 위해서.. 휴식.!
+
+## Week16 (23.06.05 ~ 23.06.11)
+|                                         제목                                          |                  기록 사항                   |
+| :-----------------------------------------------------------------------------------: | :------------------------------------------: |
+|                     [RGB 거리2](https://www.acmicpc.net/problem/17404)                      |   DP    |
+|               [카드 짝 맞추기](https://school.programmers.co.kr/learn/courses/30/lessons/72415?language=cpp)               | 완전 탐색(DFS, BFS) |
+| [도로 네트워크](https://www.acmicpc.net/problem/3176) |      LCA(Lowest Common Ancestor) - Sparse Table          |
