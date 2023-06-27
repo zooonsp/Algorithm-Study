@@ -61,8 +61,8 @@ string GetToday() {
 	int cnt{};
 	while (std::getline(iss, temp, '-')) {
 		today += temp;
-		if (cnt == 0) { today += "년"; ++cnt; }
-		else if (cnt == 1) { today += "월"; ++cnt; }
+		if (cnt == 0) { today += "년 "; ++cnt; }
+		else if (cnt == 1) { today += "월 "; ++cnt; }
 		else if (cnt == 2) { today += "일"; ++cnt; }
 	}
 	// cout << today << '\n';
@@ -122,8 +122,8 @@ int main() {
 	vector<string> resultName;
 	for (auto i : result[index] | std::views::transform(func)) resultName.emplace_back(i);
 
-	
-	cout << "오늘 날짜 : \t\t" << today << "\n\n이번주 PRTable은 \t";
+
+	cout << "오늘 날짜 : \t\t" << today << "\n\n이번주 PR Table은 \t";
 	Print(resultName);
 
 	/*
