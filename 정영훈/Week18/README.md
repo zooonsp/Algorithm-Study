@@ -7,8 +7,8 @@
 | [웜홀](#bellman-ford벨만-포드) | Bellman-Ford(벨만 포드) | [웜홀](https://www.acmicpc.net/problem/1865) |
 | [플로이드](#floyd-warshall플로이드-워셜) | Floyd-Warshall(플로이드-워셜) | [플로이드](https://www.acmicpc.net/problem/11404) |
 | [역사](#floyd-warshall플로이드-워셜) | Floyd-Warshall(플로이드-워셜) | [역사](https://www.acmicpc.net/problem/1613) |
-| [단절점](#biconnected-componentbcc-이중-연결-요소) | Biconnectd-Component(BCC) | [단절점](https://www.acmicpc.net/problem/11266) |
-| [단절선](#biconnected-componentbcc-이중-연결-요소) | Biconnectd-Component(BCC) | [단절선](https://www.acmicpc.net/problem/11400) |
+| [단절점](#biconnected-componentbcc-이중-연결-요소) | Biconnected-Component(BCC) | [단절점](https://www.acmicpc.net/problem/11266) |
+| [단절선](#biconnected-componentbcc-이중-연결-요소) | Biconnected-Component(BCC) | [단절선](https://www.acmicpc.net/problem/11400) |
 
 <br>
 
