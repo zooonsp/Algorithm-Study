@@ -145,5 +145,5 @@
 | [웜홀](https://www.acmicpc.net/problem/1865) | Bellman-Ford(벨만 포드) |
 | [플로이드](https://www.acmicpc.net/problem/11404) | Floyd-Warshall(플로이드-워셜) |
 | [역사](https://www.acmicpc.net/problem/1613) | Floyd-Warshall(플로이드-워셜) |
-| [단절점](https://www.acmicpc.net/problem/11266) | Biconnectd-Component(BCC) |
-| [단절선](https://www.acmicpc.net/problem/11400) | Biconnectd-Component(BCC) |
+| [단절점](https://www.acmicpc.net/problem/11266) | Biconnected-Component(BCC) |
+| [단절선](https://www.acmicpc.net/problem/11400) | Biconnected-Component(BCC) |
