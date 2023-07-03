@@ -15,7 +15,7 @@ int main(void) {
     cin >> N >> M >> W;
 
     vector<vector<pair<int, int>>> adj(N);
-    vector<long long> dist(N);
+    vector<long long> dist(N, INF);
 
     for (int i = 0; i < M; i++) {
       int u, v, cost;
@@ -30,7 +30,6 @@ int main(void) {
       adj[u - 1].push_back({v - 1, -cost});
     }
 
-    dist[0] = 0;
     bool updated = false;
 
     for (int i = 0; i < N; i++) {
@@ -38,7 +37,7 @@ int main(void) {
 
       for (int now = 0; now < N; now++) {
         for (auto [next, cost] : adj[now]) {
-          if (dist[now] != INF && dist[next] > dist[now] + cost) {
+          if (dist[next] > dist[now] + cost) {
             dist[next] = dist[now] + cost;
             updated = true;
           }
