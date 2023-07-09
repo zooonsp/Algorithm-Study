@@ -17,7 +17,7 @@ int main(void) {
     vector<int> pastRank(N + 1);
     // change[a][b]: a팀과 b팀의 순위가 바뀌었는가?
     vector<vector<bool>> change(N + 1, vector<bool>(N + 1));
-    // 상대적 순위 인접 그래프
+    // 상대적 순위 인접 리스트
     vector<vector<int>> adj(N + 1);
     // 해당 정점에 들어오는 간선의 개수
     vector<int> indegree(N + 1);
