@@ -147,3 +147,10 @@
 | [역사](https://www.acmicpc.net/problem/1613) | Floyd-Warshall(플로이드-워셜) |
 | [단절점](https://www.acmicpc.net/problem/11266) | Biconnected-Component(BCC) |
 | [단절선](https://www.acmicpc.net/problem/11400) | Biconnected-Component(BCC) |
+
+## Week19 (23.07.03 ~ 23.07.09)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [합승 택시 요금](https://school.programmers.co.kr/learn/courses/30/lessons/72413) | Floyd-Warshall |
+| [Strongly Connected Component](https://www.acmicpc.net/problem/2150) | SCC(Strongly Connected Component) |
+| [최종 순위](https://www.acmicpc.net/problem/3665) | Topological Sort(위상 정렬) |
