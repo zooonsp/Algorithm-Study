@@ -139,8 +139,8 @@
 ## Week18 (23.06.26 ~ 23.07.02)
 |                                         제목                                          |                  기록 사항                   |
 | :-----------------------------------------------------------------------------------: | :------------------------------------------: |
-|                     [줄 세우기](https://www.acmicpc.net/problem/2252)                      |   Topological Sort(위상 정렬)   |
-|                     [문제집](https://www.acmicpc.net/problem/1766)                      |   Topological Sort(위상 정렬)   |
+| [줄 세우기](https://www.acmicpc.net/problem/2252) | Topological Sort(위상 정렬) |
+| [문제집](https://www.acmicpc.net/problem/1766) | Topological Sort(위상 정렬) |
 | [타임머신](https://www.acmicpc.net/problem/11657) | Bellman-Ford(벨만 포드) |
 | [웜홀](https://www.acmicpc.net/problem/1865) | Bellman-Ford(벨만 포드) |
 | [플로이드](https://www.acmicpc.net/problem/11404) | Floyd-Warshall(플로이드-워셜) |
@@ -154,3 +154,13 @@
 | [합승 택시 요금](https://school.programmers.co.kr/learn/courses/30/lessons/72413) | Floyd-Warshall |
 | [Strongly Connected Component](https://www.acmicpc.net/problem/2150) | SCC(Strongly Connected Component) |
 | [최종 순위](https://www.acmicpc.net/problem/3665) | Topological Sort(위상 정렬) |
+
+## Week20 (23.07.10 ~ 23.07.16)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [CCW](https://www.acmicpc.net/problem/11758) | Geometry (기하 - 벡터의 활용) |
+| [다각형의 면적](https://www.acmicpc.net/problem/2166) | Geometry (기하 - 벡터의 활용) |
+| [개코전쟁](https://www.acmicpc.net/problem/2325) | Dijkstra |
+| [오민식의 고민](https://www.acmicpc.net/problem/1219) | Bellman-Ford |
+| [Ignition](https://www.acmicpc.net/problem/13141) | Floyd-Warshall, Brute-Force |
+| [블록 이동하기](https://school.programmers.co.kr/learn/courses/30/lessons/60063) | 구현 | 
