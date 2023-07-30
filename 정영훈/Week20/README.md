@@ -33,3 +33,9 @@
 
 - [해설 링크](https://tech.kakao.com/2019/10/02/kakao-blind-recruitment-2020-round1/#elementor-toc__heading-anchor-38)
 - 내 접근 : 구현
+- 구현 과정에서 빠뜨린 부분이 있어서 제대로 정답이 나오지 않았음..!!! (적어놓고 구성하자!)
+```cpp
+// 이거 두 줄?.. 빼먹어서 ㅇ으어러어렁러어어ㅓ
+if (board[nx][ny] == 1) continue;
+if (board[otherNx][otherNy] == 1) continue;
+```
