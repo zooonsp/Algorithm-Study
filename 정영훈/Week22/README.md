@@ -47,4 +47,4 @@ for (vector<int>& frame : build_frame) {
 
 ## 축사 배정
 - [문제 링크](https://www.acmicpc.net/problem/2188)
-- 문제 유형 : Network Flow
+- 문제 유형 : Network Flow, 이분 매칭
