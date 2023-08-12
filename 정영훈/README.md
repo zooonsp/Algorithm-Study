@@ -164,3 +164,17 @@
 | [오민식의 고민](https://www.acmicpc.net/problem/1219) | Bellman-Ford |
 | [Ignition](https://www.acmicpc.net/problem/13141) | Floyd-Warshall, Brute-Force |
 | [블록 이동하기](https://school.programmers.co.kr/learn/courses/30/lessons/60063) | 구현 | 
+
+## Week21 (23.07.17 ~ 23.07.23)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [돌의 정령 줄세우기](https://www.acmicpc.net/problem/24025) | Greedy, 해 구성하기 |
+| [외벽 점검](https://school.programmers.co.kr/learn/courses/30/lessons/60062) | 구현 |
+| [최대 유량](https://www.acmicpc.net/problem/6086) | Network Flow |
+
+## Week22 (23.07.24 ~ 23.08.06)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [새로운 게임](https://www.acmicpc.net/problem/17780) | 구현, 시뮬레이션 |
+| [기둥과 보 설치](https://school.programmers.co.kr/learn/courses/30/lessons/60061) | 구현 |
+| [축사 배정](https://www.acmicpc.net/problem/2188) | Network Flow |
