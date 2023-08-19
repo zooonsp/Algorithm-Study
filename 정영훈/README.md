@@ -178,3 +178,10 @@
 | [새로운 게임](https://www.acmicpc.net/problem/17780) | 구현, 시뮬레이션 |
 | [기둥과 보 설치](https://school.programmers.co.kr/learn/courses/30/lessons/60061) | 구현 |
 | [축사 배정](https://www.acmicpc.net/problem/2188) | Network Flow |
+
+## Week23 (23.08.07 ~ 23.08.13)
+| 제목 | 기록 사항 |
+| :---: | :---: |
+| [회의실 배정](https://www.acmicpc.net/problem/1931) | 그리디, 정렬 |
+| [단어 수학](https://www.acmicpc.net/problem/1339) | 그리디 |
+| [길 찾기 게임](https://school.programmers.co.kr/learn/courses/30/lessons/42892) | 구현 |
